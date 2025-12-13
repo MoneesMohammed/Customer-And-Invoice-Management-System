@@ -574,7 +574,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create Invoices";
             this.Activated += new System.EventHandler(this.frmCreateInvoices_Activated);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCreateInvoices_FormClosing);
             this.Load += new System.EventHandler(this.frmCreateInvoices_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabCustomerInfo.ResumeLayout(false);

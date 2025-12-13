@@ -510,20 +510,5 @@ namespace CIMS.Services.Create_Invoices
             frmShowProductInfo.ShowDialog();
         }
 
-        private void frmCreateInvoices_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Are you sure you want to exit?",
-                                           "exit",
-                                           MessageBoxButtons.YesNo);
-
-            if (result == DialogResult.No)
-                e.Cancel = true; // منع الإغلاق
-
-        }
-
-
-
-
-        //ctrlFilterCustomer1
     }
 }
