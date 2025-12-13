@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA57E89E-8393-4F43-9BE9-AE5B4BD887DE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CIMS</RootNamespace>
+    <AssemblyName>CIMS</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Customers\frmAddEditCustomerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\frmAddEditCustomerInfo.Designer.cs">
+      <DependentUpon>frmAddEditCustomerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\frmCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\frmCustomers.Designer.cs">
+      <DependentUpon>frmCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\frmShowCustomerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\frmShowCustomerInfo.Designer.cs">
+      <DependentUpon>frmShowCustomerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global Classes\clsPDF.cs" />
+    <Compile Include="Services\Create Invoices\frmAddProductToInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\Create Invoices\frmAddProductToInvoice.Designer.cs">
+      <DependentUpon>frmAddProductToInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Create Invoices\frmAddProductToInvoiceInDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\Create Invoices\frmAddProductToInvoiceInDetail.Designer.cs">
+      <DependentUpon>frmAddProductToInvoiceInDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Create Invoices\frmCreateInvoices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\Create Invoices\frmCreateInvoices.Designer.cs">
+      <DependentUpon>frmCreateInvoices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\frmServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\frmServices.Designer.cs">
+      <DependentUpon>frmServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global Classes\clsGlobal.cs" />
+    <Compile Include="Global Classes\clsUtil.cs" />
+    <Compile Include="Global Classes\clsValidatoin.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Manage Invoices\frmInvoiceShowDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\Manage Invoices\frmInvoiceShowDetails.Designer.cs">
+      <DependentUpon>frmInvoiceShowDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Manage Invoices\frmManageInvoices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\Manage Invoices\frmManageInvoices.Designer.cs">
+      <DependentUpon>frmManageInvoices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Payments\frmAddEditPaymentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\Payments\frmAddEditPaymentInfo.Designer.cs">
+      <DependentUpon>frmAddEditPaymentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Payments\frmPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\Payments\frmPayments.Designer.cs">
+      <DependentUpon>frmPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Products\frmAddEditProductInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\Products\frmAddEditProductInfo.Designer.cs">
+      <DependentUpon>frmAddEditProductInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Products\frmProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\Products\frmProducts.Designer.cs">
+      <DependentUpon>frmProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Products\frmShowProductInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\Products\frmShowProductInfo.Designer.cs">
+      <DependentUpon>frmShowProductInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlInvoices\CtrlFilterInvoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlInvoices\CtrlFilterInvoice.Designer.cs">
+      <DependentUpon>CtrlFilterInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlInvoices\CtrlInvoiceInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlInvoices\CtrlInvoiceInfo.Designer.cs">
+      <DependentUpon>CtrlInvoiceInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlPayment\CtrlSelectedMethod.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlPayment\CtrlSelectedMethod.Designer.cs">
+      <DependentUpon>CtrlSelectedMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlPerson\CtrlFilterCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlPerson\CtrlFilterCustomer.Designer.cs">
+      <DependentUpon>CtrlFilterCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlPerson\CtrlPersonInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlPerson\CtrlPersonInfo.Designer.cs">
+      <DependentUpon>CtrlPersonInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlProduct\CtrlProductCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlProduct\CtrlProductCard.Designer.cs">
+      <DependentUpon>CtrlProductCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlProduct\CtrlProductInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlProduct\CtrlProductInfo.Designer.cs">
+      <DependentUpon>CtrlProductInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlUser\crtlUserDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlUser\crtlUserDetails.Designer.cs">
+      <DependentUpon>crtlUserDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmAddEditUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmAddEditUserInfo.Designer.cs">
+      <DependentUpon>frmAddEditUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmShowUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmShowUserInfo.Designer.cs">
+      <DependentUpon>frmShowUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmUsers.Designer.cs">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Customers\frmAddEditCustomerInfo.resx">
+      <DependentUpon>frmAddEditCustomerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\frmCustomers.resx">
+      <DependentUpon>frmCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\frmShowCustomerInfo.resx">
+      <DependentUpon>frmShowCustomerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Create Invoices\frmAddProductToInvoice.resx">
+      <DependentUpon>frmAddProductToInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Create Invoices\frmAddProductToInvoiceInDetail.resx">
+      <DependentUpon>frmAddProductToInvoiceInDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Create Invoices\frmCreateInvoices.resx">
+      <DependentUpon>frmCreateInvoices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\frmServices.resx">
+      <DependentUpon>frmServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Services\Manage Invoices\frmInvoiceShowDetails.resx">
+      <DependentUpon>frmInvoiceShowDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Manage Invoices\frmManageInvoices.resx">
+      <DependentUpon>frmManageInvoices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Payments\frmAddEditPaymentInfo.resx">
+      <DependentUpon>frmAddEditPaymentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Payments\frmPayments.resx">
+      <DependentUpon>frmPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Products\frmAddEditProductInfo.resx">
+      <DependentUpon>frmAddEditProductInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Products\frmProducts.resx">
+      <DependentUpon>frmProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Products\frmShowProductInfo.resx">
+      <DependentUpon>frmShowProductInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlInvoices\CtrlFilterInvoice.resx">
+      <DependentUpon>CtrlFilterInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlInvoices\CtrlInvoiceInfo.resx">
+      <DependentUpon>CtrlInvoiceInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlPayment\CtrlSelectedMethod.resx">
+      <DependentUpon>CtrlSelectedMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlPerson\CtrlFilterCustomer.resx">
+      <DependentUpon>CtrlFilterCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlPerson\CtrlPersonInfo.resx">
+      <DependentUpon>CtrlPersonInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlProduct\CtrlProductCard.resx">
+      <DependentUpon>CtrlProductCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlProduct\CtrlProductInfo.resx">
+      <DependentUpon>CtrlProductInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlUser\crtlUserDetails.resx">
+      <DependentUpon>crtlUserDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmAddEditUserInfo.resx">
+      <DependentUpon>frmAddEditUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmShowUserInfo.resx">
+      <DependentUpon>frmShowUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmUsers.resx">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CIMS_BusinessLayer\CIMS_BusinessLayer.csproj">
+      <Project>{771df6fe-baec-41f3-a921-be5ccbb10266}</Project>
+      <Name>CIMS_BusinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account-settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer-service%282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-friend%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diskette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arroba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telephone-call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\europe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\face-id.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\woman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset-password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue-520x220.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\read-more.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\in-stock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\best-price.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tag %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credit-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\financial-statements.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receive-amount.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receive-amount1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\design.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analysis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash-payment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pfizer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\debit-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\debit-card %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cheque.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\virutal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online-payment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credit-card1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

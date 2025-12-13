@@ -1,0 +1,6 @@
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS_DataAccessLayar\bin\Debug\CIMS_DataAccessLayar.dll
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS_DataAccessLayar\bin\Debug\CIMS_DataAccessLayar.pdb
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS_DataAccessLayar\obj\Debug\CIMS_DataAccessLayar.csproj.AssemblyReference.cache
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS_DataAccessLayar\obj\Debug\CIMS_DataAccessLayar.csproj.CoreCompileInputs.cache
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS_DataAccessLayar\obj\Debug\CIMS_DataAccessLayar.dll
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS_DataAccessLayar\obj\Debug\CIMS_DataAccessLayar.pdb

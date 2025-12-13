@@ -1,0 +1,9 @@
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS_BusinessLayer\bin\Debug\CIMS_BusinessLayer.dll
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS_BusinessLayer\bin\Debug\CIMS_BusinessLayer.pdb
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS_BusinessLayer\bin\Debug\CIMS_DataAccessLayar.dll
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS_BusinessLayer\bin\Debug\CIMS_DataAccessLayar.pdb
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS_BusinessLayer\obj\Debug\CIMS_BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS_BusinessLayer\obj\Debug\CIMS_BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS_BusinessLayer\obj\Debug\CIMS_Bus.8112E623.Up2Date
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS_BusinessLayer\obj\Debug\CIMS_BusinessLayer.dll
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS_BusinessLayer\obj\Debug\CIMS_BusinessLayer.pdb
