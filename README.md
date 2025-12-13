@@ -25,6 +25,25 @@ It was built for learning purposes and follows the **3-Tier Architecture** patte
 ## Customers Screen
 ![alt text for the image](Screenshots/Customer-Screen.png)
 
+## PDF Template
+![alt text for the image](Screenshots/PDF-template.png)
+
+
+## Invoice Creation Screen
+
+<table>
+  <tr>
+    <td><img src="Screenshots/Invoice-creation-screen(1).png" width="300"/></td>
+    <td><img src="Screenshots/Invoice-creation-screen(2).png" width="300"/></td>
+    <td><img src="Screenshots/Invoice-creation-screen(3).png" width="300"/></td>
+    <td><img src="Screenshots/Invoice-creation-screen(4).png" width="300"/></td>
+    <td><img src="Screenshots/Invoice-creation-screen(5).png" width="300"/></td>
+    <td><img src="Screenshots/Invoice-creation-screen(6).png" width="300"/></td>
+    <td><img src="Screenshots/Invoice-creation-screen(7).png" width="300"/></td>
+  </tr>
+</table>
+
+
 ---
 
 ## 🏷️ Main Services Provided
