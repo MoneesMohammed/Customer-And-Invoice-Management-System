@@ -38,7 +38,6 @@ It was built for learning purposes and follows the **3-Tier Architecture** patte
     <td><img src="Screenshots/Invoice-creation-screen(3).png" width="300"/></td>
     <td><img src="Screenshots/Invoice-creation-screen(4).png" width="300"/></td>
     <td><img src="Screenshots/Invoice-creation-screen(5).png" width="300"/></td>
-    <td><img src="Screenshots/Invoice-creation-screen(6).png" width="300"/></td>
     <td><img src="Screenshots/Invoice-creation-screen(7).png" width="300"/></td>
   </tr>
 </table>
