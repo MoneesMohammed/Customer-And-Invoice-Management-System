@@ -14,12 +14,14 @@ It was built for learning purposes and follows the **3-Tier Architecture** patte
 ---
 
 ## 📌 Features
-- Manage Customer 
+- Manage Customers
 - Managing users as an ( employee )
 - Manage Product
-- Invoices Creation
+- Invoice Creation
 - Manage Invoices
 - Save Invoices as a PDF file
+
+---
 
 ---
 
