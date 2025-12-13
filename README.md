@@ -1,5 +1,7 @@
 # Customer & Invoice Management System
-C# WinForms, SQL Server, ADO.NET Developed a complete CRUD system with customer management, invoicing, Products and payments .
+A complete Customer & Invoice Management System built using C# WinForms, SQL Server, and ADO.NET.
+The system implements full CRUD operations for customers, products, invoices, and payments.
+
 
 This project is a customer and invoice management system (Professional Transactional System).
 
@@ -14,13 +16,13 @@ It was built for learning purposes and follows the **3-Tier Architecture** patte
 ---
 
 ## 📌 Features
-- Manage Customers
-- Managing users as an ( employee )
-- Manage Product
-- Invoice Creation
-- Manage Invoices
-- Save Invoices as a PDF file
-
+- Customer Management
+- User Management (Employees)
+- Product Management
+- Invoice Creation & Management
+- Payment Tracking
+- Export Invoices as PDF
+  
 ---
 ## Customers Screen
 ![alt text for the image](Screenshots/Customer-Screen.png)
@@ -47,12 +49,13 @@ It was built for learning purposes and follows the **3-Tier Architecture** patte
 
 ## 🏷️ Main Services Provided
 
-1. Customer management
+1. Customer Management
 2. Invoice Management
 3. Invoice Creation
-5. Products
-4. Payments
+4. Product Management
+5. Payments
 6. Reports
+
 
 
 ---
@@ -78,19 +81,21 @@ It was built for learning purposes and follows the **3-Tier Architecture** patte
 ---
 
 ## ▶️ How to Run
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/USERNAME/Customer-And-Invoice-Management-System.git
 
-Restore The Database , 
- **Database name should be CIMS**
+2. Restore the database:
+    - Database name must be: CIMS
 
-Then Open The **CIMS** Folder You Will Find :
+3. Open the solution:
+    - Open CIMS.sln using Visual Studio
 
-Then just run the **CIMS.sln**
+4. Run the project
+   
+    🔐 Default Login
 
-To enter the system user the following user:
+      - Username: Monees
 
-username: Monees
-
-Password : 1234
+      - Password: 1234
