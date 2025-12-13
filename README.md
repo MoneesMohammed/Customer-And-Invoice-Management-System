@@ -3,7 +3,7 @@ A complete Customer & Invoice Management System built using C# WinForms, SQL Ser
 The system implements full CRUD operations for customers, products, invoices, and payments.
 
 
-This project is a customer and invoice management system (Professional Transactional System).
+This project is a customer and invoice management system designed as a professional transactional system.
 
 Through it, you can register customers, register users (employees), register products, create invoices linked to existing customers in the system, and record payments linked to the invoice . All of this is saved in the database.
 
@@ -99,3 +99,9 @@ It was built for learning purposes and follows the **3-Tier Architecture** patte
       - Username: Monees
 
       - Password: 1234
+  
+---
+## ⚠️ Note
+
+```md
+   > ⚠️ This project is built for learning and portfolio purposes.
