@@ -22,6 +22,8 @@ It was built for learning purposes and follows the **3-Tier Architecture** patte
 - Save Invoices as a PDF file
 
 ---
+## Customers Screen
+![alt text for the image](Screenshots/Customer-Screen.png)
 
 ---
 
