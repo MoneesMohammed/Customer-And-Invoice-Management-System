@@ -1,7 +1,8 @@
 # Customer & Invoice Management System
 C# WinForms, SQL Server, ADO.NET Developed a complete CRUD system with customer management, invoicing, Products and payments .
 
-This project is a customer and invoice management system.
+This project is a customer and invoice management system (Professional Transactional System).
+
 Through it, you can register customers, register users (employees), register products, create invoices linked to existing customers in the system, and record payments linked to the invoice . All of this is saved in the database.
 
 It was built for learning purposes and follows the **3-Tier Architecture** pattern: 
