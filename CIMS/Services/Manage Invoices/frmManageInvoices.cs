@@ -280,12 +280,9 @@ namespace CIMS.Services.Manage_Invoices
 
         private void tsmPrintPDF_Click(object sender, EventArgs e)
         {
-            //clsPDF.ExportInvoiceToPDF();
             int InvoiceID = (int)dgvAllInvoices.CurrentRow.Cells[0].Value;
 
-            clsInvoice Invoice = clsInvoice.Find(InvoiceID);
-
-           clsPDF.GenerateInvoicePDF(InvoiceID, Invoice.CustomerInfo.FullName , Invoice.InvoiceDate, Invoice.CustomerID.ToString() , clsInvoiceDetail.GetAllInvoiceDetails(InvoiceID) , Invoice.TotalAmount);
+            clsPDF.GenerateInvoicePDF(InvoiceID);
         }
     }
 }

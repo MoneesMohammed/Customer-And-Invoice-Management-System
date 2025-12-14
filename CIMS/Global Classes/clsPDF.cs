@@ -6,6 +6,7 @@ using Org.BouncyCastle.Ocsp;
 using System;
 using System.Data;
 using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -67,21 +68,31 @@ namespace CIMS.Global_Classes
             MessageBox.Show("The invoice has been successfully exported to PDF!");
         }
 
+        public static void GenerateInvoicePDF(int InvoiceID)
+        {
+            clsInvoice Invoice = clsInvoice.Find(InvoiceID);
+
+            if (Invoice == null)
+            {
+                MessageBox.Show($"No Invoice With ID {InvoiceID}", "Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+             
+                return;
+            }
+                
+
+            string customerName = Invoice.CustomerInfo.FullName;
+            DateTime dateInvoice = Invoice.InvoiceDate;
+            string customerID = Invoice.CustomerID.ToString();
+            DataTable itemsTable = clsInvoiceDetail.GetAllInvoiceDetails(InvoiceID);
+            float totalAmount = Invoice.TotalAmount;
 
 
-    public static void GenerateInvoicePDF(
-    int invoiceID,
-    string customerName,
-    DateTime dateInvoice,
-    string customerID,
-    DataTable itemsTable,
-    float totalAmount)
-    {
+
             // تحديد مكان حفظ الملف
             SaveFileDialog saveDialog = new SaveFileDialog();
             saveDialog.Filter = "PDF file|*.pdf";
             saveDialog.Title = "Save Invoice as PDF";
-            saveDialog.FileName = $"Invoice_{invoiceID}.pdf";
+            saveDialog.FileName = $"Invoice_{InvoiceID}.pdf";
 
             if (saveDialog.ShowDialog() != DialogResult.OK)
                 return;
@@ -94,6 +105,7 @@ namespace CIMS.Global_Classes
             BaseColor blue = new BaseColor(0, 153, 255); // نفس الأزرق تقريباً
             BaseColor red = new BaseColor(255, 0, 0);
             BaseColor black = new BaseColor(0, 0, 0);
+            BaseColor green = new BaseColor(0, 153, 0);
             // ================= LOGO =================
             // iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(Resources.pfizer);
             // @"C:\Users\nuwmo\OneDrive\Pictures\New folder (3)\Icons\New folder\pfizer.png");
@@ -110,15 +122,20 @@ namespace CIMS.Global_Classes
             headerTable.WidthPercentage = 100;
             headerTable.SetWidths(new float[] { 1f, 1f });
 
-            headerTable.AddCell(new PdfPCell(logo)
-            {
-                Border = Rectangle.NO_BORDER,
-                Padding = 5
-            });
+            //headerTable.AddCell(new PdfPCell(logo)
+            //{
+            //    Border = Rectangle.NO_BORDER,
+            //    Padding = 5
+            //});
+
+            PdfPCell TitleName = new PdfPCell();
+            TitleName.Border = Rectangle.NO_BORDER;
+            TitleName.HorizontalAlignment = Element.ALIGN_LEFT;
+
+            headerTable.AddCell(MakeCompanyNameCell(logo , "Company Name"));
 
             // عنوان INVOICE
-            PdfPCell invoiceTitle = new PdfPCell(new Phrase("INVOICE",
-                new Font(Font.FontFamily.HELVETICA, 26, Font.BOLD, blue)))
+            PdfPCell invoiceTitle = new PdfPCell(new Phrase("INVOICE", new Font(Font.FontFamily.HELVETICA, 26, Font.BOLD, blue)))
             {
                 HorizontalAlignment = Element.ALIGN_RIGHT,
                 Border = Rectangle.NO_BORDER,
@@ -126,37 +143,54 @@ namespace CIMS.Global_Classes
             };
             headerTable.AddCell(invoiceTitle);
 
+
             doc.Add(headerTable);
             doc.Add(new Paragraph("\n"));
 
             // ================= CUSTOMER INFO =================
             PdfPTable infoTable = new PdfPTable(2);
             infoTable.WidthPercentage = 100;
-            infoTable.SetWidths(new float[] { 1f, 1f });
+            infoTable.SetWidths(new float[] { 1f , 1f});
 
-            PdfPCell cell = new PdfPCell();
-            cell.Border = Rectangle.NO_BORDER;
-            cell.HorizontalAlignment = Element.ALIGN_LEFT;
+            PdfPCell cell_1 = new PdfPCell();
+            cell_1.Border = Rectangle.NO_BORDER;
+            cell_1.HorizontalAlignment = Element.ALIGN_LEFT;
 
-            // النص الأول الأسود
+            
             Phrase p1 = new Phrase("Invoice To:\n", new Font(Font.FontFamily.HELVETICA, 12, Font.NORMAL, black));
-            cell.AddElement(p1);
+            cell_1.AddElement(p1);
 
-            // الاسم الأحمر
+           
             Phrase p2 = new Phrase(customerName, new Font(Font.FontFamily.HELVETICA, 12, Font.BOLD, red));
-            cell.AddElement(p2);
+            cell_1.AddElement(p2);
 
-            infoTable.AddCell(cell);
+            infoTable.AddCell(cell_1);
 
-            infoTable.AddCell(MakeInfoCell(
-                $"Invoice ID  {invoiceID}\n" +
-                $"Customer ID  {customerID}\n" +
-                $"Date  {dateInvoice:dd MMM yyyy}", true , black));
+            PdfPCell cell_2 = new PdfPCell();
+            cell_2.Border = Rectangle.NO_BORDER;
+            cell_2.HorizontalAlignment = Element.ALIGN_RIGHT;
+
+            Font font = new Font(Font.FontFamily.HELVETICA, 12, Font.NORMAL);
+
+            Paragraph p3 = new Paragraph($"Invoice  ID      {InvoiceID}", font);
+            Paragraph p4 = new Paragraph($"Customer ID      {customerID}", font);
+            Paragraph p5 = new Paragraph($"Date          {dateInvoice:dd MMM yyyy}", font);
+
+            p3.Alignment = Element.ALIGN_RIGHT;
+            p4.Alignment = p3.Alignment;
+            p5.Alignment = p4.Alignment;
+
+
+            cell_2.AddElement(p3);
+            cell_2.AddElement(p4);
+            cell_2.AddElement(p5);
+
+            infoTable.AddCell(cell_2);
+
 
             doc.Add(infoTable);
             doc.Add(new Paragraph("\n\n"));
 
-            
             // ================= TABLE HEADER =================
             PdfPTable table = new PdfPTable(5);
             table.WidthPercentage = 100;
@@ -185,28 +219,71 @@ namespace CIMS.Global_Classes
 
             // ================= TOTALS =================
             PdfPTable totalsTable = new PdfPTable(2);
-            totalsTable.WidthPercentage = 40;//40
+            totalsTable.WidthPercentage = 50;//40
             totalsTable.HorizontalAlignment = Element.ALIGN_RIGHT;
 
+            totalsTable.AddCell(MakeTotalCell("", ""));
+            totalsTable.AddCell(MakeTotalCell("TOTAL", totalAmount.ToString("0.00"), true));
+
+            doc.Add(totalsTable);
+            doc.Add(new Paragraph("\n"));
+
+            PdfPTable StatusTable = new PdfPTable(1);
+            StatusTable.WidthPercentage = 50;//40
+            StatusTable.HorizontalAlignment = Element.ALIGN_RIGHT;
+
             // ================= InvoiceStatus =================
-            clsInvoice Invoice = clsInvoice.Find(invoiceID);
+
             if (Invoice.InvoiceStatus == clsInvoice.enInvoiceStatus.Pending)
             {
-                string TotalPaid = clsPayment.GetTotalPaidByInvoiceID(invoiceID).ToString("0.00");
+                string TotalPaid = clsPayment.GetTotalPaidByInvoiceID(InvoiceID).ToString("0.00");
                 string RemainingAmount = (Invoice.TotalAmount - Convert.ToSingle(TotalPaid)).ToString("0.00");
 
-                totalsTable.AddCell(MakeTotalCell("TOTAL", totalAmount.ToString("0.00"), true));
-                totalsTable.AddCell(MakeInfoCell($"Paid {TotalPaid}\n\nRemaining Amount {RemainingAmount}", false, black));
+                StatusTable.AddCell(MakePaidRemainingCell("Paid", TotalPaid , "Remaining Amount" , RemainingAmount));
+
+                doc.Add(StatusTable);
+                doc.Add(new Paragraph("\n\n"));
+
+            }
+            else if(Invoice.InvoiceStatus == clsInvoice.enInvoiceStatus.Paid)
+            {
+                PdfPCell IsPaidCell = new PdfPCell(new Phrase("The Invoice Has Been Paid .", new Font(Font.FontFamily.HELVETICA, 16, Font.BOLD, green)))
+                {
+                    HorizontalAlignment = Element.ALIGN_CENTER,
+                    Border = Rectangle.NO_BORDER,
+                    PaddingTop = 10,
+                    PaddingBottom = 5
+                };
+
+                StatusTable.AddCell(IsPaidCell);
+
+
+                doc.Add(StatusTable);
+                doc.Add(new Paragraph("\n\n"));
+
+            }
+            else if (Invoice.InvoiceStatus == clsInvoice.enInvoiceStatus.Cancelled)
+            {
+                PdfPCell IsPaidCell = new PdfPCell(new Phrase("The Invoice Has Been Cancelled .", new Font(Font.FontFamily.HELVETICA, 16, Font.BOLD, red)))
+                {
+                    HorizontalAlignment = Element.ALIGN_CENTER,
+                    Border = Rectangle.NO_BORDER,
+                    PaddingTop = 10,
+                    PaddingBottom = 5
+                };
+
+                StatusTable.AddCell(IsPaidCell);
+
+
+                doc.Add(StatusTable);
+                doc.Add(new Paragraph("\n\n"));
 
             }
             else
-            { 
-                totalsTable.AddCell(MakeTotalCell("", "", true));
-                totalsTable.AddCell(MakeTotalCell("TOTAL", totalAmount.ToString("0.00"), true));
+            {
+                doc.Add(new Paragraph("\n"));
+                
             }
-
-            doc.Add(totalsTable);
-            doc.Add(new Paragraph("\n\n"));
 
 
             // ================= SIGNATURE =================
@@ -222,6 +299,7 @@ namespace CIMS.Global_Classes
 
             System.Diagnostics.Process.Start(saveDialog.FileName);
         }
+
 
         // =========== Helper Methods ===========
 
@@ -263,7 +341,7 @@ namespace CIMS.Global_Classes
 
             PdfPTable inner = new PdfPTable(2);
             inner.WidthPercentage = 100;
-            inner.SetWidths(new float[] { 50, 50 });
+            inner.SetWidths(new float[] { 50f , 50f });
 
             inner.AddCell(new PdfPCell(new Phrase(label, f))
             {
@@ -285,15 +363,64 @@ namespace CIMS.Global_Classes
             return wrapper;
         }
 
+        public static PdfPCell MakePaidRemainingCell(string paidLabel,string paidValue,string remainingLabel,string remainingValue)
+        {
+            Font labelFont = new Font(Font.FontFamily.HELVETICA, 12, Font.NORMAL);
+            Font valueFont = new Font(Font.FontFamily.HELVETICA, 12, Font.BOLD);
 
-        
+            PdfPTable inner = new PdfPTable(4);
+            inner.WidthPercentage = 100;
 
+            // التحكم بالمسافات بين كل كلمة
+            inner.SetWidths(new float[] { 15f, 20f, 40f, 18f });
 
+            inner.AddCell(CreateCell(paidLabel, labelFont, Element.ALIGN_LEFT));
+            inner.AddCell(CreateCell(paidValue, valueFont, Element.ALIGN_LEFT));
+            inner.AddCell(CreateCell(remainingLabel, labelFont, Element.ALIGN_LEFT));
+            inner.AddCell(CreateCell(remainingValue, valueFont, Element.ALIGN_RIGHT));
 
-       
+            PdfPCell wrapper = new PdfPCell(inner)
+            {
+                Border = Rectangle.NO_BORDER,
+                PaddingTop = 10,
+                PaddingBottom = 5
+            };
 
+            return wrapper;
+        }
 
+        private static PdfPCell CreateCell(string text, Font font, int alignment)
+        {
+            return new PdfPCell(new Phrase(text, font))
+            {
+                Border = Rectangle.NO_BORDER,
+                HorizontalAlignment = alignment,
+                Padding = 3
+            };
+        }
 
+        public static PdfPCell MakeCompanyNameCell(iTextSharp.text.Image logo ,string companyName)
+        {
+            Font Font = new Font(Font.FontFamily.HELVETICA, 22, Font.BOLD);
+
+            PdfPTable inner = new PdfPTable(2);
+            inner.WidthPercentage = 100;
+
+            inner.SetWidths(new float[] { 1f, 1f });
+
+            inner.AddCell(new PdfPCell(logo) { Border = Rectangle.NO_BORDER , Padding = 5});
+                 
+            inner.AddCell(CreateCell(companyName, Font, Element.ALIGN_LEFT));
+          
+
+            PdfPCell wrapper = new PdfPCell(inner)
+            {
+                Border = Rectangle.NO_BORDER,
+                Padding = 5
+            };
+
+            return wrapper;
+        }
 
     }
 }
