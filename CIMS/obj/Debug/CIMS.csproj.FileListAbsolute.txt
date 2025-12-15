@@ -45,3 +45,5 @@ C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS\bin\Debug\BouncyCastle.Crypto
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS\bin\Debug\itextsharp.dll
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS\bin\Debug\BouncyCastle.Cryptography.xml
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS\bin\Debug\itextsharp.xml
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS\obj\Debug\CIMS.Services.Reports.frmReports.resources
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS\obj\Debug\CIMS.UserControls.CtrlInvoices.CtrlCustomerInvoicesInfo.resources

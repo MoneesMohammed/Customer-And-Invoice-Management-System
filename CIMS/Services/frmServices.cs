@@ -3,6 +3,7 @@ using CIMS.Services.Create_Invoices;
 using CIMS.Services.Manage_Invoices;
 using CIMS.Services.Payments;
 using CIMS.Services.Products;
+using CIMS.Services.Reports;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,6 +55,12 @@ namespace CIMS
         private void ManageInvoices_Click(object sender, EventArgs e)
         {
             frmManageInvoices frm = new frmManageInvoices();
+            frm.ShowDialog();
+        }
+
+        private void Reports_Click(object sender, EventArgs e)
+        {
+            frmReports frm = new frmReports();
             frm.ShowDialog();
         }
     }

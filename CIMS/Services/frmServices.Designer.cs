@@ -95,6 +95,7 @@
             this.llblReports.TabIndex = 4;
             this.llblReports.TabStop = true;
             this.llblReports.Text = "Reports";
+            this.llblReports.Click += new System.EventHandler(this.Reports_Click);
             // 
             // llblCreateInvoices
             // 
@@ -168,6 +169,7 @@
             this.pbReports.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbReports.TabIndex = 8;
             this.pbReports.TabStop = false;
+            this.pbReports.Click += new System.EventHandler(this.Reports_Click);
             // 
             // pbCustomers
             // 

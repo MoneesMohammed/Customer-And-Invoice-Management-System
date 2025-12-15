@@ -154,6 +154,18 @@
     <Compile Include="Services\Products\frmShowProductInfo.Designer.cs">
       <DependentUpon>frmShowProductInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Services\Reports\frmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\Reports\frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlInvoices\CtrlCustomerInvoicesInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlInvoices\CtrlCustomerInvoicesInfo.Designer.cs">
+      <DependentUpon>CtrlCustomerInvoicesInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\CtrlInvoices\CtrlFilterInvoice.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -283,6 +295,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Services\Products\frmShowProductInfo.resx">
       <DependentUpon>frmShowProductInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\Reports\frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlInvoices\CtrlCustomerInvoicesInfo.resx">
+      <DependentUpon>CtrlCustomerInvoicesInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CtrlInvoices\CtrlFilterInvoice.resx">
       <DependentUpon>CtrlFilterInvoice.cs</DependentUpon>
@@ -567,6 +585,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scale_1200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forecast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analystics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
