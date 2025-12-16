@@ -93,6 +93,8 @@ namespace CIMS.UserControls.CtrlProduct
         {
             frmAddEditProductInfo EditProductInfo = new frmAddEditProductInfo(_ProductID);
             EditProductInfo.ShowDialog();
+
+            LoadProductInfo(_ProductID);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using CIMS_BusinessLayer;
+﻿using CIMS.Services.Products;
+using CIMS_BusinessLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -142,8 +143,14 @@ namespace CIMS.UserControls.CtrlInvoices
 
         }
 
+        private void tsmShowProductInfo_Click(object sender, EventArgs e)
+        {
+            int ProductID = (int)dgvAllInvoiceDetails.CurrentRow.Cells[0].Value;
 
+            frmShowProductInfo frm = new frmShowProductInfo(ProductID);
+            frm.ShowDialog();
 
-
+            _RefreshInvoiceList();
+        }
     }
 }

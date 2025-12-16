@@ -112,6 +112,12 @@
     <Compile Include="Global Classes\clsValidatoin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Manage Invoices\frmInvoiceHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\Manage Invoices\frmInvoiceHistory.Designer.cs">
+      <DependentUpon>frmInvoiceHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Services\Manage Invoices\frmInvoiceShowDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,12 +166,6 @@
     <Compile Include="Services\Reports\frmReports.Designer.cs">
       <DependentUpon>frmReports.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\CtrlInvoices\CtrlCustomerInvoicesInfo.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\CtrlInvoices\CtrlCustomerInvoicesInfo.Designer.cs">
-      <DependentUpon>CtrlCustomerInvoicesInfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\CtrlInvoices\CtrlFilterInvoice.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -177,6 +177,12 @@
     </Compile>
     <Compile Include="UserControls\CtrlInvoices\CtrlInvoiceInfo.Designer.cs">
       <DependentUpon>CtrlInvoiceInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlInvoices\CtrlInvoicesDGV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlInvoices\CtrlInvoicesDGV.Designer.cs">
+      <DependentUpon>CtrlInvoicesDGV.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\CtrlPayment\CtrlSelectedMethod.cs">
       <SubType>UserControl</SubType>
@@ -275,6 +281,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Services\Manage Invoices\frmInvoiceHistory.resx">
+      <DependentUpon>frmInvoiceHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Services\Manage Invoices\frmInvoiceShowDetails.resx">
       <DependentUpon>frmInvoiceShowDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -299,14 +308,14 @@
     <EmbeddedResource Include="Services\Reports\frmReports.resx">
       <DependentUpon>frmReports.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\CtrlInvoices\CtrlCustomerInvoicesInfo.resx">
-      <DependentUpon>CtrlCustomerInvoicesInfo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CtrlInvoices\CtrlFilterInvoice.resx">
       <DependentUpon>CtrlFilterInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CtrlInvoices\CtrlInvoiceInfo.resx">
       <DependentUpon>CtrlInvoiceInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlInvoices\CtrlInvoicesDGV.resx">
+      <DependentUpon>CtrlInvoicesDGV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CtrlPayment\CtrlSelectedMethod.resx">
       <DependentUpon>CtrlSelectedMethod.cs</DependentUpon>
@@ -600,6 +609,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transaction-history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transaction-history %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

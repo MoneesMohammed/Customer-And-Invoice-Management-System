@@ -1,12 +1,12 @@
 ﻿using CIMS_BusinessLayer;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+using CIMS.Services.Products;
+using CIMS.Global_Classes;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using CIMS.Services.Manage_Invoices;
 using System.Windows.Forms;
 
 namespace CIMS.Services.Reports
@@ -86,7 +86,7 @@ namespace CIMS.Services.Reports
 
         private void btnSaveToPDF_Click(object sender, EventArgs e)
         {
-
+            clsPDF.GenerateSalesReportPDF(_dtSalesReport);
         }
 
         private void cbFilterSalesBy_SelectedIndexChanged(object sender, EventArgs e)
@@ -206,6 +206,25 @@ namespace CIMS.Services.Reports
                 }
 
             }
+        }
+
+        private void tsmShowCustomerInvoiceHistory_Click(object sender, EventArgs e)
+        {
+            int CustomerID = (int)dgvCustomersReport.CurrentRow.Cells[0].Value;
+            frmInvoiceHistory frm = new frmInvoiceHistory(CustomerID);
+            frm.ShowDialog();
+        }
+
+        private void tsmShowProductInfo_Click(object sender, EventArgs e)
+        {
+            string ProductName = (string)dgvTopProducts.CurrentRow.Cells[0].Value;
+            int ProductID = clsProduct.GetProductIDByProductName(ProductName);
+            frmShowProductInfo frm = new frmShowProductInfo(ProductID);
+            frm.ShowDialog();
+
+            _dtTopProducts = clsReport.GetTopProducts();
+            dgvTopProducts.DataSource = _dtTopProducts;
+
         }
     }
 }

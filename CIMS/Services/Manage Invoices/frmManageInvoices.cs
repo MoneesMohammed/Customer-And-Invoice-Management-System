@@ -230,9 +230,6 @@ namespace CIMS.Services.Manage_Invoices
 
             }
 
-                
-
-            _RefreshInvoicesList();
 
         }
 
@@ -278,11 +275,17 @@ namespace CIMS.Services.Manage_Invoices
             _RefreshInvoicesList();
         }
 
-        private void tsmPrintPDF_Click(object sender, EventArgs e)
+        private void tsmSaveToPDF_Click(object sender, EventArgs e)
         {
             int InvoiceID = (int)dgvAllInvoices.CurrentRow.Cells[0].Value;
 
             clsPDF.GenerateInvoicePDF(InvoiceID);
+        }
+
+        private void btnShowCustomerInvoiceHistory_Click(object sender, EventArgs e)
+        {
+            frmInvoiceHistory frm = new frmInvoiceHistory();
+            frm.ShowDialog();
         }
     }
 }

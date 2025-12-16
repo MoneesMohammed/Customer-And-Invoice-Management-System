@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace CIMS_DataAccessLayar
 {
@@ -274,7 +276,6 @@ namespace CIMS_DataAccessLayar
 
         }
 
-
         public static bool UpdateQuantityInStock(int ProductID, int QuantityInStock)
         {
             int RowAffected = 0;
@@ -307,6 +308,37 @@ namespace CIMS_DataAccessLayar
             return (RowAffected > 0);
 
         }
+
+        public static int GetProductIDByProductName(string ProductName)
+        {
+            int ID = -1;
+            SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);
+            string query = @"SELECT ProductID FROM Products WHERE Name = @ProductName";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@ProductName", ProductName);
+            
+            try
+            {
+                connection.Open();
+                object Result = command.ExecuteScalar();
+
+                if (Result != null && int.TryParse(Result.ToString(), out int insertedID))
+                {
+                    ID = insertedID;
+                }
+
+            }
+            catch
+            { ID = -1; }
+            finally
+            { connection.Close(); }
+           
+
+            return ID;
+        }
+
 
     }
 }

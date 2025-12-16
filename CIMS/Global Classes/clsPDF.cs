@@ -14,58 +14,104 @@ namespace CIMS.Global_Classes
 {
     public class clsPDF
     {
-        public static void ExportInvoiceToPDF()
+        public static void GenerateSalesReportPDF(DataTable dtSalesReport)
         {
             // تحديد مكان حفظ الملف
             SaveFileDialog saveDialog = new SaveFileDialog();
             saveDialog.Filter = "PDF file|*.pdf";
             saveDialog.Title = "Save Invoice as PDF";
+            saveDialog.FileName = $"Report_1.pdf";
 
             if (saveDialog.ShowDialog() != DialogResult.OK)
                 return;
 
-            // إنشاء المستند
-            Document doc = new Document(PageSize.A4);
-            PdfWriter.GetInstance(doc, new FileStream(saveDialog.FileName, FileMode.Create));
-
+            Document doc = new Document(PageSize.A4, 30, 30, 40, 30);
+            PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(saveDialog.FileName, FileMode.Create));
             doc.Open();
 
-            // عنوان الفاتورة
-            Paragraph title = new Paragraph("Sales invoice",
-                new Font(Font.FontFamily.HELVETICA, 20, Font.BOLD));
-            title.Alignment = Element.ALIGN_CENTER;
-            doc.Add(title);
+            // ================= COLOR ================
+            BaseColor blue = new BaseColor(0, 153, 255); // نفس الأزرق تقريباً
+            BaseColor red = new BaseColor(255, 0, 0);
+            BaseColor black = new BaseColor(0, 0, 0);
+            BaseColor green = new BaseColor(0, 153, 0);
 
+            // ================= LOGO =================
+            
+            MemoryStream ms = new MemoryStream();
+            Resources.pfizer.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+
+            iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(ms.ToArray());
+
+            logo.ScaleAbsolute(90, 90);
+            logo.Alignment = Element.ALIGN_LEFT;
+
+            PdfPTable headerTable = new PdfPTable(2);
+            headerTable.WidthPercentage = 100;
+            headerTable.SetWidths(new float[] { 1f, 1f });
+
+            headerTable.AddCell(MakeCompanyNameCell(logo, "Company Name"));
+
+            // عنوان Report
+            PdfPCell reportTitle = new PdfPCell(new Phrase("Report", new Font(Font.FontFamily.HELVETICA, 26, Font.BOLD, blue)))
+            {
+                HorizontalAlignment = Element.ALIGN_RIGHT,
+                Border = Rectangle.NO_BORDER,
+                PaddingTop = 25
+            };
+            headerTable.AddCell(reportTitle);
+
+
+            doc.Add(headerTable);
+            doc.Add(new Paragraph("\n\n"));
+            // ================= Sales Report =================
+            
+            MemoryStream msT = new MemoryStream();
+            Resources.forecast.Save(msT, System.Drawing.Imaging.ImageFormat.Png);
+
+            iTextSharp.text.Image logoSales = iTextSharp.text.Image.GetInstance(msT.ToArray());
+
+            logoSales.ScaleAbsolute(42, 42);
+            logoSales.Alignment = Element.ALIGN_RIGHT;
+
+
+            PdfPTable SalesTitleTable = new PdfPTable(1);
+            SalesTitleTable.WidthPercentage = 100;
+            SalesTitleTable.SetWidths(new float[] { 1f });
+            SalesTitleTable.HorizontalAlignment = Element.ALIGN_MIDDLE;
+            
+
+
+            SalesTitleTable.AddCell(MakeReportsTitleCell(logoSales, "Sales Report"));
+
+            doc.Add(SalesTitleTable);
             doc.Add(new Paragraph("\n"));
 
-            // مثال معلومات الفاتورة
-            doc.Add(new Paragraph("Invoice number: 123"));
-            doc.Add(new Paragraph("the date: " + DateTime.Now.ToShortDateString()));
-            doc.Add(new Paragraph("Customer name: Ahmed"));
-            doc.Add(new Paragraph("\n"));
+            // ================= TABLE HEADER =================
+            PdfPTable SalesReportTable = CreateSalesReportTable(blue);
 
-            // جدول البيانات (مثل DataGridView)
-            PdfPTable table = new PdfPTable(3); // عدد الأعمدة
-            table.AddCell("Product");
-            table.AddCell("Quantity");
-            table.AddCell("the price");
+            SalesReportTable.HeaderRows = 1;
 
-            // مثال: تعبئة جدول من DataGridView
-            //foreach (DataGridViewRow row in dgvInvoiceDetails.Rows)
-            //{
-            //    table.AddCell(row.Cells["ProductName"].Value.ToString());
-            //    table.AddCell(row.Cells["Quantity"].Value.ToString());
-            //    table.AddCell(row.Cells["Price"].Value.ToString());
-            //}
+            // ================= TABLE ROWS =================CountryID
+            foreach (DataRow row in dtSalesReport.Rows)
+            {
+                SalesReportTable.AddCell(MakeCell(Convert.ToDateTime(row["Sale Date"]).ToString("MM/dd/yyyy")));
+                SalesReportTable.AddCell(MakeCell(row["Total Sales"].ToString()));
 
-            doc.Add(table);
+            }
 
-            // المجموع
-            doc.Add(new Paragraph("\nthe total: 200$"));
+            doc.Add(SalesReportTable);
+            //doc.Add(new Paragraph("\n\n"));
+            // ================= Top Products =================
+            // ================= Customers Report =================
+
 
             doc.Close();
 
-            MessageBox.Show("The invoice has been successfully exported to PDF!");
+            MessageBox.Show($"The Report has been successfully exported to PDF ! :\n{saveDialog.FileName}", "Success",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            System.Diagnostics.Process.Start(saveDialog.FileName);
+
         }
 
         public static void GenerateInvoicePDF(int InvoiceID)
@@ -127,10 +173,6 @@ namespace CIMS.Global_Classes
             //    Border = Rectangle.NO_BORDER,
             //    Padding = 5
             //});
-
-            PdfPCell TitleName = new PdfPCell();
-            TitleName.Border = Rectangle.NO_BORDER;
-            TitleName.HorizontalAlignment = Element.ALIGN_LEFT;
 
             headerTable.AddCell(MakeCompanyNameCell(logo , "Company Name"));
 
@@ -294,7 +336,7 @@ namespace CIMS.Global_Classes
 
             doc.Close();
 
-            MessageBox.Show($"PDF It Was Successfully Created :\n{saveDialog.FileName}", "Success",
+            MessageBox.Show($"The Invoice has been successfully exported to PDF ! :\n{saveDialog.FileName}", "Success",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             System.Diagnostics.Process.Start(saveDialog.FileName);
@@ -408,7 +450,7 @@ namespace CIMS.Global_Classes
 
             inner.SetWidths(new float[] { 1f, 1f });
 
-            inner.AddCell(new PdfPCell(logo) { Border = Rectangle.NO_BORDER , Padding = 5});
+            inner.AddCell(new PdfPCell(logo) { Border = Rectangle.NO_BORDER , Padding = 5 , PaddingTop = -20 });
                  
             inner.AddCell(CreateCell(companyName, Font, Element.ALIGN_LEFT));
           
@@ -420,6 +462,51 @@ namespace CIMS.Global_Classes
             };
 
             return wrapper;
+        }
+
+
+        public static PdfPCell MakeReportsTitleCell(iTextSharp.text.Image logo, string Title)
+        {
+            Font Font = new Font(Font.FontFamily.HELVETICA, 22, Font.BOLD);
+
+            PdfPTable inner = new PdfPTable(2);
+            inner.WidthPercentage = 100;
+
+            inner.SetWidths(new float[] { 14, 10 });
+
+            PdfPCell CellTitle = new PdfPCell(new Phrase(Title, Font))
+            {   Border = Rectangle.NO_BORDER,
+                Padding = 3, 
+                HorizontalAlignment = Element.ALIGN_RIGHT
+                //PaddingLeft = 100
+            };
+
+            //inner.AddCell(CreateCell(Title, Font, Element.ALIGN_RIGHT));
+
+            inner.AddCell(CellTitle);
+            inner.AddCell(new PdfPCell(logo) { Border = Rectangle.NO_BORDER, Padding = 5 , PaddingTop = -8 , PaddingBottom = 10 });
+
+            PdfPCell wrapper = new PdfPCell(inner)
+            {
+                Border = Rectangle.NO_BORDER,
+                Padding = 5
+            };
+
+            return wrapper;
+        }
+
+
+        public static PdfPTable CreateSalesReportTable(BaseColor Color)
+        {
+            PdfPTable SalesReportTable = new PdfPTable(2);
+            SalesReportTable.WidthPercentage = 100;
+            SalesReportTable.SetWidths(new float[] { 10, 10 });
+
+            SalesReportTable.AddCell(MakeHeaderCell("Sale Date", Color));
+            SalesReportTable.AddCell(MakeHeaderCell("Total Sales", Color));
+
+            return SalesReportTable;
+
         }
 
     }

@@ -42,17 +42,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dgvAllCustomers = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmShowDetails = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmAddNewCustomer = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmSendEmail = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmPhoneCall = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAddNewCustomer = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmShowInvoiceHistory = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllCustomers)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -194,33 +196,30 @@
             this.tsmDelete,
             this.toolStripSeparator1,
             this.tsmSendEmail,
-            this.tsmPhoneCall});
+            this.tsmPhoneCall,
+            this.toolStripSeparator3,
+            this.tsmShowInvoiceHistory});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(272, 292);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(268, 6);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(268, 6);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(284, 366);
             // 
             // tsmShowDetails
             // 
             this.tsmShowDetails.Image = global::CIMS.Properties.Resources.project;
             this.tsmShowDetails.Name = "tsmShowDetails";
-            this.tsmShowDetails.Size = new System.Drawing.Size(271, 46);
+            this.tsmShowDetails.Size = new System.Drawing.Size(283, 46);
             this.tsmShowDetails.Text = "Show Details";
             this.tsmShowDetails.Click += new System.EventHandler(this.tsmShowDetails_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(280, 6);
             // 
             // tsmAddNewCustomer
             // 
             this.tsmAddNewCustomer.Image = global::CIMS.Properties.Resources.add_friend_1_;
             this.tsmAddNewCustomer.Name = "tsmAddNewCustomer";
-            this.tsmAddNewCustomer.Size = new System.Drawing.Size(271, 46);
+            this.tsmAddNewCustomer.Size = new System.Drawing.Size(283, 46);
             this.tsmAddNewCustomer.Text = "Add New Customer";
             this.tsmAddNewCustomer.Click += new System.EventHandler(this.AddNewCustomer_Click);
             // 
@@ -228,7 +227,7 @@
             // 
             this.tsmEdit.Image = global::CIMS.Properties.Resources.edit;
             this.tsmEdit.Name = "tsmEdit";
-            this.tsmEdit.Size = new System.Drawing.Size(271, 46);
+            this.tsmEdit.Size = new System.Drawing.Size(283, 46);
             this.tsmEdit.Text = "Edit";
             this.tsmEdit.Click += new System.EventHandler(this.tsmEdit_Click);
             // 
@@ -236,15 +235,20 @@
             // 
             this.tsmDelete.Image = global::CIMS.Properties.Resources.delete;
             this.tsmDelete.Name = "tsmDelete";
-            this.tsmDelete.Size = new System.Drawing.Size(271, 46);
+            this.tsmDelete.Size = new System.Drawing.Size(283, 46);
             this.tsmDelete.Text = "Delete";
             this.tsmDelete.Click += new System.EventHandler(this.tsmDelete_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(280, 6);
             // 
             // tsmSendEmail
             // 
             this.tsmSendEmail.Image = global::CIMS.Properties.Resources.apple;
             this.tsmSendEmail.Name = "tsmSendEmail";
-            this.tsmSendEmail.Size = new System.Drawing.Size(271, 46);
+            this.tsmSendEmail.Size = new System.Drawing.Size(283, 46);
             this.tsmSendEmail.Text = "Send Email";
             this.tsmSendEmail.Click += new System.EventHandler(this.tsmSendEmail_Click);
             // 
@@ -252,7 +256,7 @@
             // 
             this.tsmPhoneCall.Image = global::CIMS.Properties.Resources.call;
             this.tsmPhoneCall.Name = "tsmPhoneCall";
-            this.tsmPhoneCall.Size = new System.Drawing.Size(271, 46);
+            this.tsmPhoneCall.Size = new System.Drawing.Size(283, 46);
             this.tsmPhoneCall.Text = "Phone Call";
             this.tsmPhoneCall.Click += new System.EventHandler(this.tsmPhoneCall_Click);
             // 
@@ -291,6 +295,19 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(280, 6);
+            // 
+            // tsmShowInvoiceHistory
+            // 
+            this.tsmShowInvoiceHistory.Image = global::CIMS.Properties.Resources.transaction_history;
+            this.tsmShowInvoiceHistory.Name = "tsmShowInvoiceHistory";
+            this.tsmShowInvoiceHistory.Size = new System.Drawing.Size(283, 46);
+            this.tsmShowInvoiceHistory.Text = "Show Invoice History";
+            this.tsmShowInvoiceHistory.Click += new System.EventHandler(this.tsmShowCustomerInvoiceHistory_Click);
             // 
             // frmCustomers
             // 
@@ -343,5 +360,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem tsmSendEmail;
         private System.Windows.Forms.ToolStripMenuItem tsmPhoneCall;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem tsmShowInvoiceHistory;
     }
 }

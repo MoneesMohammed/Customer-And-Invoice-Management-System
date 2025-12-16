@@ -3,23 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DA57E89E-8393-4F43-9BE9-AE5B4BD887DE}|CIMS.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims\\usercontrols\\ctrlinvoices\\ctrlcustomerinvoicesinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DA57E89E-8393-4F43-9BE9-AE5B4BD887DE}|CIMS.csproj|solutionrelative:usercontrols\\ctrlinvoices\\ctrlcustomerinvoicesinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA57E89E-8393-4F43-9BE9-AE5B4BD887DE}|CIMS.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims\\services\\manage invoices\\frmmanageinvoices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA57E89E-8393-4F43-9BE9-AE5B4BD887DE}|CIMS.csproj|solutionrelative:services\\manage invoices\\frmmanageinvoices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA57E89E-8393-4F43-9BE9-AE5B4BD887DE}|CIMS.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims\\services\\reports\\frmreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DA57E89E-8393-4F43-9BE9-AE5B4BD887DE}|CIMS.csproj|C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS\\services\\reports\\frmreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DA57E89E-8393-4F43-9BE9-AE5B4BD887DE}|CIMS.csproj|solutionrelative:services\\reports\\frmreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA57E89E-8393-4F43-9BE9-AE5B4BD887DE}|CIMS.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims\\services\\reports\\frmreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DA57E89E-8393-4F43-9BE9-AE5B4BD887DE}|CIMS.csproj|C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS\\services\\reports\\frmreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA57E89E-8393-4F43-9BE9-AE5B4BD887DE}|CIMS.csproj|solutionrelative:services\\reports\\frmreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DA57E89E-8393-4F43-9BE9-AE5B4BD887DE}|CIMS.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims\\global classes\\clspdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA57E89E-8393-4F43-9BE9-AE5B4BD887DE}|CIMS.csproj|solutionrelative:global classes\\clspdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BBC3265F-0F07-4678-88BC-203B9652F64B}|..\\CIMS_DataAccessLayar\\CIMS_DataAccessLayar.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims_dataaccesslayar\\reportsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{771DF6FE-BAEC-41F3-A921-BE5CCBB10266}|..\\CIMS_BusinessLayer\\CIMS_BusinessLayer.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims_businesslayer\\report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{771DF6FE-BAEC-41F3-A921-BE5CCBB10266}|..\\CIMS_BusinessLayer\\CIMS_BusinessLayer.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims_businesslayer\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBC3265F-0F07-4678-88BC-203B9652F64B}|..\\CIMS_DataAccessLayar\\CIMS_DataAccessLayar.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims_dataaccesslayar\\productsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BBC3265F-0F07-4678-88BC-203B9652F64B}|..\\CIMS_DataAccessLayar\\CIMS_DataAccessLayar.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims_dataaccesslayar\\invoicesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -28,19 +33,10 @@
       "AbsoluteMoniker": "D:0:0:{771DF6FE-BAEC-41F3-A921-BE5CCBB10266}|..\\CIMS_BusinessLayer\\CIMS_BusinessLayer.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims_businesslayer\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{771DF6FE-BAEC-41F3-A921-BE5CCBB10266}|..\\CIMS_BusinessLayer\\CIMS_BusinessLayer.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims_businesslayer\\report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC3265F-0F07-4678-88BC-203B9652F64B}|..\\CIMS_DataAccessLayar\\CIMS_DataAccessLayar.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims_dataaccesslayar\\invoicedetailsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{771DF6FE-BAEC-41F3-A921-BE5CCBB10266}|..\\CIMS_BusinessLayer\\CIMS_BusinessLayer.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims_businesslayer\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{771DF6FE-BAEC-41F3-A921-BE5CCBB10266}|..\\CIMS_BusinessLayer\\CIMS_BusinessLayer.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims_businesslayer\\invoicedetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBC3265F-0F07-4678-88BC-203B9652F64B}|..\\CIMS_DataAccessLayar\\CIMS_DataAccessLayar.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims_dataaccesslayar\\productsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BBC3265F-0F07-4678-88BC-203B9652F64B}|..\\CIMS_DataAccessLayar\\CIMS_DataAccessLayar.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims_dataaccesslayar\\invoicedetailsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,45 +58,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CtrlCustomerInvoicesInfo.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS\\UserControls\\CtrlInvoices\\CtrlCustomerInvoicesInfo.cs",
-              "RelativeDocumentMoniker": "UserControls\\CtrlInvoices\\CtrlCustomerInvoicesInfo.cs",
-              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS\\UserControls\\CtrlInvoices\\CtrlCustomerInvoicesInfo.cs [Design]",
-              "RelativeToolTip": "UserControls\\CtrlInvoices\\CtrlCustomerInvoicesInfo.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "clsPDF.cs",
+              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS\\Global Classes\\clsPDF.cs",
+              "RelativeDocumentMoniker": "Global Classes\\clsPDF.cs",
+              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS\\Global Classes\\clsPDF.cs",
+              "RelativeToolTip": "Global Classes\\clsPDF.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAAGIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T12:27:40.988Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmManageInvoices.cs",
-              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS\\Services\\Manage Invoices\\frmManageInvoices.cs",
-              "RelativeDocumentMoniker": "Services\\Manage Invoices\\frmManageInvoices.cs",
-              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS\\Services\\Manage Invoices\\frmManageInvoices.cs",
-              "RelativeToolTip": "Services\\Manage Invoices\\frmManageInvoices.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAmwHwAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T11:47:36.692Z",
+              "WhenOpened": "2025-12-16T08:09:08.803Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "frmReports.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS\\Services\\Reports\\frmReports.cs",
               "RelativeDocumentMoniker": "Services\\Reports\\frmReports.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS\\Services\\Reports\\frmReports.cs",
               "RelativeToolTip": "Services\\Reports\\frmReports.cs",
-              "ViewState": "AgIAALEAAAAAAAAAAAAiwL4AAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAA1wFgAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-15T09:55:41.681Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "frmReports.cs [Design]",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS\\Services\\Reports\\frmReports.cs",
               "RelativeDocumentMoniker": "Services\\Reports\\frmReports.cs",
@@ -112,7 +96,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "ReportsData.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_DataAccessLayar\\ReportsData.cs",
               "RelativeDocumentMoniker": "..\\CIMS_DataAccessLayar\\ReportsData.cs",
@@ -125,91 +109,94 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "Report.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_BusinessLayer\\Report.cs",
               "RelativeDocumentMoniker": "..\\CIMS_BusinessLayer\\Report.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_BusinessLayer\\Report.cs",
               "RelativeToolTip": "..\\CIMS_BusinessLayer\\Report.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-15T09:28:44.663Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "InvoiceDetailsData.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_DataAccessLayar\\InvoiceDetailsData.cs",
               "RelativeDocumentMoniker": "..\\CIMS_DataAccessLayar\\InvoiceDetailsData.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_DataAccessLayar\\InvoiceDetailsData.cs",
               "RelativeToolTip": "..\\CIMS_DataAccessLayar\\InvoiceDetailsData.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAA9wDQBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA1wDUBAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-05T06:38:34.347Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "InvoiceDetail.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_BusinessLayer\\InvoiceDetail.cs",
               "RelativeDocumentMoniker": "..\\CIMS_BusinessLayer\\InvoiceDetail.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_BusinessLayer\\InvoiceDetail.cs",
               "RelativeToolTip": "..\\CIMS_BusinessLayer\\InvoiceDetail.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAAA7wIUAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAkwIUAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T06:37:42.079Z"
+              "WhenOpened": "2025-12-05T06:37:42.079Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "InvoicesData.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_DataAccessLayar\\InvoicesData.cs",
               "RelativeDocumentMoniker": "..\\CIMS_DataAccessLayar\\InvoicesData.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_DataAccessLayar\\InvoicesData.cs",
               "RelativeToolTip": "..\\CIMS_DataAccessLayar\\InvoicesData.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAAAP4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAA1wAgBAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-05T04:33:06.058Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Invoice.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_BusinessLayer\\Invoice.cs",
               "RelativeDocumentMoniker": "..\\CIMS_BusinessLayer\\Invoice.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_BusinessLayer\\Invoice.cs",
               "RelativeToolTip": "..\\CIMS_BusinessLayer\\Invoice.cs",
-              "ViewState": "AgIAAIQAAAAAAAAAAAAqwBUAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAqwKIAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-05T04:31:10.843Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 6,
               "Title": "ProductsData.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_DataAccessLayar\\ProductsData.cs",
               "RelativeDocumentMoniker": "..\\CIMS_DataAccessLayar\\ProductsData.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_DataAccessLayar\\ProductsData.cs",
               "RelativeToolTip": "..\\CIMS_DataAccessLayar\\ProductsData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOsAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAgwDcBAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T20:54:57.252Z"
+              "WhenOpened": "2025-11-30T20:54:57.252Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_BusinessLayer\\Product.cs",
               "RelativeDocumentMoniker": "..\\CIMS_BusinessLayer\\Product.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_BusinessLayer\\Product.cs",
               "RelativeToolTip": "..\\CIMS_BusinessLayer\\Product.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAAIkAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAAAI4AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T20:54:05.037Z"
+              "WhenOpened": "2025-11-30T20:54:05.037Z",
+              "EditorCaption": ""
             }
           ]
         }

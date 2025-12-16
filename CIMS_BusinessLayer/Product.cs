@@ -139,5 +139,10 @@ namespace CIMS_BusinessLayer
         {
             return clsProductsData.UpdateQuantityInStock(this.ProductID, this.QuantityInStock + Quantity);
         }
+
+        public static int GetProductIDByProductName(string ProductName)
+        {
+            return clsProductsData.GetProductIDByProductName(ProductName);
+        }
     }
 }

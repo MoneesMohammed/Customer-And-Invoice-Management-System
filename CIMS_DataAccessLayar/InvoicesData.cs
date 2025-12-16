@@ -253,6 +253,37 @@ namespace CIMS_DataAccessLayar
 
         }
 
+        public static DataTable GetInvoicesByCustomerID(int CustomerID)
+        {
+            DataTable dt = new DataTable();
+
+            SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);
+            string query = @"SELECT * FROM Invoices_View WHERE [Full Name] = 
+                            (SELECT P.FirstName+' '+ P.SecondName+' '+ P.ThirdName+' '+P.LastName as CustomerName
+                            FROM Customers C JOIN People P ON C.PersonID = P.PersonID
+                            WHERE C.CustomerID = @CustomerID)
+                            ORDER BY [Invoice ID];";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@CustomerID", CustomerID);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                { dt.Load(reader); }
+                   
+                reader.Close();
+            }
+            catch { }
+            finally { connection.Close(); }
+            
+            return dt;
+        }
+
+
         public static bool SetTotalAmount(int InvoiceID, float TotalAmount)
         {
             int RowAffected = 0;

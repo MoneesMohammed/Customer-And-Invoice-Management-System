@@ -1,4 +1,5 @@
-﻿using CIMS_BusinessLayer;
+﻿using CIMS.Services.Manage_Invoices;
+using CIMS_BusinessLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -168,6 +169,13 @@ namespace CIMS.Customers
         private void tsmPhoneCall_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This feature will be available soon.", "Phone Call", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void tsmShowCustomerInvoiceHistory_Click(object sender, EventArgs e)
+        {
+            int CustomerID = (int)dgvAllCustomers.CurrentRow.Cells[0].Value;
+            frmInvoiceHistory frm = new frmInvoiceHistory(CustomerID);
+            frm.ShowDialog();
         }
     }
 }

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvAllInvoices = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -44,6 +44,8 @@
             this.lblRecodes = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbStatus = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnShowCustomerInvoiceHistory = new System.Windows.Forms.Button();
             this.tsmSaveToPDF = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmShowDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmCreateInvoice = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,36 +78,36 @@
             this.dgvAllInvoices.AllowUserToDeleteRows = false;
             this.dgvAllInvoices.AllowUserToOrderColumns = true;
             this.dgvAllInvoices.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAllInvoices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAllInvoices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvAllInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAllInvoices.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAllInvoices.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAllInvoices.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvAllInvoices.GridColor = System.Drawing.SystemColors.Menu;
             this.dgvAllInvoices.Location = new System.Drawing.Point(9, 264);
             this.dgvAllInvoices.Name = "dgvAllInvoices";
             this.dgvAllInvoices.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAllInvoices.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAllInvoices.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvAllInvoices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAllInvoices.Size = new System.Drawing.Size(1135, 499);
             this.dgvAllInvoices.TabIndex = 30;
@@ -125,7 +127,7 @@
             this.toolStripSeparator1,
             this.tsmPay});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(229, 360);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(229, 338);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // toolStripSeparator2
@@ -229,13 +231,36 @@
             this.cbStatus.Visible = false;
             this.cbStatus.SelectedIndexChanged += new System.EventHandler(this.cbStatus_SelectedIndexChanged);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Indigo;
+            this.label5.Location = new System.Drawing.Point(756, 229);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(229, 20);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Show Customer Invoice History";
+            // 
+            // btnShowCustomerInvoiceHistory
+            // 
+            this.btnShowCustomerInvoiceHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowCustomerInvoiceHistory.Image = global::CIMS.Properties.Resources.transaction_history__1_;
+            this.btnShowCustomerInvoiceHistory.Location = new System.Drawing.Point(825, 155);
+            this.btnShowCustomerInvoiceHistory.Name = "btnShowCustomerInvoiceHistory";
+            this.btnShowCustomerInvoiceHistory.Size = new System.Drawing.Size(75, 71);
+            this.btnShowCustomerInvoiceHistory.TabIndex = 32;
+            this.btnShowCustomerInvoiceHistory.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnShowCustomerInvoiceHistory.UseVisualStyleBackColor = true;
+            this.btnShowCustomerInvoiceHistory.Click += new System.EventHandler(this.btnShowCustomerInvoiceHistory_Click);
+            // 
             // tsmSaveToPDF
             // 
             this.tsmSaveToPDF.Image = global::CIMS.Properties.Resources.pdf;
             this.tsmSaveToPDF.Name = "tsmSaveToPDF";
             this.tsmSaveToPDF.Size = new System.Drawing.Size(228, 46);
             this.tsmSaveToPDF.Text = "Save to PDF";
-            this.tsmSaveToPDF.Click += new System.EventHandler(this.tsmPrintPDF_Click);
+            this.tsmSaveToPDF.Click += new System.EventHandler(this.tsmSaveToPDF_Click);
             // 
             // tsmShowDetails
             // 
@@ -326,6 +351,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1157, 822);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnShowCustomerInvoiceHistory);
             this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.dgvAllInvoices);
             this.Controls.Add(this.txtFilterBy);
@@ -375,5 +402,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmPay;
         private System.Windows.Forms.ComboBox cbStatus;
         private System.Windows.Forms.ToolStripMenuItem tsmSaveToPDF;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnShowCustomerInvoiceHistory;
     }
 }

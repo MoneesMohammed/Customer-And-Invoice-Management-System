@@ -160,6 +160,10 @@ namespace CIMS_BusinessLayer
             return clsInvoicesData.GetAllInvoices();
         }
 
+        public static DataTable GetInvoicesByCustomerID(int CustomerID)
+        {
+            return clsInvoicesData.GetInvoicesByCustomerID(CustomerID);
+        }
 
         public bool SetTotalAmount(float TotalAmount)
         {
