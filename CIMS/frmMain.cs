@@ -1,4 +1,5 @@
 ﻿using CIMS.Global_Classes;
+using CIMS.Help;
 using CIMS.Users;
 using System;
 using System.Collections.Generic;
@@ -53,7 +54,16 @@ namespace CIMS
             lblUserWelcome.Text = $"👋 Welcome! {clsGlobal.CurrentUser.UserName}";
         }
 
+        private void AboutTSMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAbout frmAbout = new frmAbout();
+            frmAbout.ShowDialog();
+        }
 
-
+        private void InstructionsTSMenuItem_Click(object sender, EventArgs e)
+        {
+            frmInstructions frmInstructions = new frmInstructions();
+            frmInstructions.ShowDialog();
+        }
     }
 }

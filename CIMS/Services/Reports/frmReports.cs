@@ -84,11 +84,7 @@ namespace CIMS.Services.Reports
             this.Close();
         }
 
-        private void btnSaveToPDF_Click(object sender, EventArgs e)
-        {
-            clsPDF.GenerateSalesReportPDF(_dtSalesReport);
-        }
-
+       
         private void cbFilterSalesBy_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbFilterSalesBy.Text == "None")
@@ -225,6 +221,21 @@ namespace CIMS.Services.Reports
             _dtTopProducts = clsReport.GetTopProducts();
             dgvTopProducts.DataSource = _dtTopProducts;
 
+        }
+
+        private void btnSRSaveToPDF_Click(object sender, EventArgs e)
+        {
+            clsPDF.GenerateSalesReportPDF(_dtSalesReport);
+        }
+
+        private void btnTPRSaveToPDF_Click(object sender, EventArgs e)
+        {
+            clsPDF.GenerateTopProductsReportPDF(_dtTopProducts);
+        }
+
+        private void btnCRSaveToPDF_Click(object sender, EventArgs e)
+        {
+            clsPDF.GenerateCustomersReportPDF(_dtCustomersReport);
         }
     }
 }

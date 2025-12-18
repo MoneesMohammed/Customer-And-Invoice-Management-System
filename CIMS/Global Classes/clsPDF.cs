@@ -20,7 +20,7 @@ namespace CIMS.Global_Classes
             SaveFileDialog saveDialog = new SaveFileDialog();
             saveDialog.Filter = "PDF file|*.pdf";
             saveDialog.Title = "Save Invoice as PDF";
-            saveDialog.FileName = $"Report_1.pdf";
+            saveDialog.FileName = $"Sales_Report_(1).pdf";
 
             if (saveDialog.ShowDialog() != DialogResult.OK)
                 return;
@@ -91,7 +91,7 @@ namespace CIMS.Global_Classes
 
             SalesReportTable.HeaderRows = 1;
 
-            // ================= TABLE ROWS =================CountryID
+            // ================= TABLE ROWS =================
             foreach (DataRow row in dtSalesReport.Rows)
             {
                 SalesReportTable.AddCell(MakeCell(Convert.ToDateTime(row["Sale Date"]).ToString("MM/dd/yyyy")));
@@ -101,8 +101,205 @@ namespace CIMS.Global_Classes
 
             doc.Add(SalesReportTable);
             //doc.Add(new Paragraph("\n\n"));
-            // ================= Top Products =================
+     
+            doc.Close();
+
+            MessageBox.Show($"The Report has been successfully exported to PDF ! :\n{saveDialog.FileName}", "Success",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            System.Diagnostics.Process.Start(saveDialog.FileName);
+
+        }
+
+
+        public static void GenerateTopProductsReportPDF(DataTable dtTopProductsReport)
+        {
+            // تحديد مكان حفظ الملف
+            SaveFileDialog saveDialog = new SaveFileDialog();
+            saveDialog.Filter = "PDF file|*.pdf";
+            saveDialog.Title = "Save Invoice as PDF";
+            saveDialog.FileName = $"Top_Products_Report_(1).pdf";
+
+            if (saveDialog.ShowDialog() != DialogResult.OK)
+                return;
+
+            Document doc = new Document(PageSize.A4, 30, 30, 40, 30);
+            PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(saveDialog.FileName, FileMode.Create));
+            doc.Open();
+
+            // ================= COLOR ================
+            BaseColor blue = new BaseColor(0, 153, 255); // نفس الأزرق تقريباً
+            BaseColor red = new BaseColor(255, 0, 0);
+            BaseColor black = new BaseColor(0, 0, 0);
+            BaseColor green = new BaseColor(0, 153, 0);
+
+            // ================= LOGO =================
+
+            MemoryStream ms = new MemoryStream();
+            Resources.pfizer.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+
+            iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(ms.ToArray());
+
+            logo.ScaleAbsolute(90, 90);
+            logo.Alignment = Element.ALIGN_LEFT;
+
+            PdfPTable headerTable = new PdfPTable(2);
+            headerTable.WidthPercentage = 100;
+            headerTable.SetWidths(new float[] { 1f, 1f });
+
+            headerTable.AddCell(MakeCompanyNameCell(logo, "Company Name"));
+
+            // عنوان Report
+            PdfPCell reportTitle = new PdfPCell(new Phrase("Report", new Font(Font.FontFamily.HELVETICA, 26, Font.BOLD, blue)))
+            {
+                HorizontalAlignment = Element.ALIGN_RIGHT,
+                Border = Rectangle.NO_BORDER,
+                PaddingTop = 25
+            };
+            headerTable.AddCell(reportTitle);
+
+
+            doc.Add(headerTable);
+            doc.Add(new Paragraph("\n\n"));
+            // ================= Top Products Report =================
+
+            MemoryStream msT = new MemoryStream();
+            Resources.sales.Save(msT, System.Drawing.Imaging.ImageFormat.Png);
+
+            iTextSharp.text.Image logoSales = iTextSharp.text.Image.GetInstance(msT.ToArray());
+
+            logoSales.ScaleAbsolute(42, 42);
+            logoSales.Alignment = Element.ALIGN_RIGHT;
+
+
+            PdfPTable SalesTitleTable = new PdfPTable(1);
+            SalesTitleTable.WidthPercentage = 100;
+            SalesTitleTable.SetWidths(new float[] { 1f });
+            SalesTitleTable.HorizontalAlignment = Element.ALIGN_MIDDLE;
+
+
+
+            SalesTitleTable.AddCell(MakeReportsTitleCell(logoSales, "Top Products Report"));
+
+            doc.Add(SalesTitleTable);
+            doc.Add(new Paragraph("\n"));
+
+            // ================= TABLE HEADER =================
+            PdfPTable TopProductsReportTable = CreateTopProductsReportTable(blue);
+
+            TopProductsReportTable.HeaderRows = 1;
+
+            // ================= TABLE ROWS =================
+            foreach (DataRow row in dtTopProductsReport.Rows)
+            {
+                TopProductsReportTable.AddCell(MakeCell(row["Name"].ToString()));
+                TopProductsReportTable.AddCell(MakeCell(row["Total Sold"].ToString()));
+
+            }
+
+            doc.Add(TopProductsReportTable);
+            //doc.Add(new Paragraph("\n\n"));
+           
+
+            doc.Close();
+
+            MessageBox.Show($"The Report has been successfully exported to PDF ! :\n{saveDialog.FileName}", "Success",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            System.Diagnostics.Process.Start(saveDialog.FileName);
+
+        }
+
+        public static void GenerateCustomersReportPDF(DataTable dtCustomersReport)
+        {
+            // تحديد مكان حفظ الملف
+            SaveFileDialog saveDialog = new SaveFileDialog();
+            saveDialog.Filter = "PDF file|*.pdf";
+            saveDialog.Title = "Save Invoice as PDF";
+            saveDialog.FileName = $"Customers_Report_(1).pdf";
+
+            if (saveDialog.ShowDialog() != DialogResult.OK)
+                return;
+
+            Document doc = new Document(PageSize.A4, 30, 30, 40, 30);
+            PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(saveDialog.FileName, FileMode.Create));
+            doc.Open();
+
+            // ================= COLOR ================
+            BaseColor blue = new BaseColor(0, 153, 255); // نفس الأزرق تقريباً
+            BaseColor red = new BaseColor(255, 0, 0);
+            BaseColor black = new BaseColor(0, 0, 0);
+            BaseColor green = new BaseColor(0, 153, 0);
+
+            // ================= LOGO =================
+
+            MemoryStream ms = new MemoryStream();
+            Resources.pfizer.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+
+            iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(ms.ToArray());
+
+            logo.ScaleAbsolute(90, 90);
+            logo.Alignment = Element.ALIGN_LEFT;
+
+            PdfPTable headerTable = new PdfPTable(2);
+            headerTable.WidthPercentage = 100;
+            headerTable.SetWidths(new float[] { 1f, 1f });
+
+            headerTable.AddCell(MakeCompanyNameCell(logo, "Company Name"));
+
+            // عنوان Report
+            PdfPCell reportTitle = new PdfPCell(new Phrase("Report", new Font(Font.FontFamily.HELVETICA, 26, Font.BOLD, blue)))
+            {
+                HorizontalAlignment = Element.ALIGN_RIGHT,
+                Border = Rectangle.NO_BORDER,
+                PaddingTop = 25
+            };
+            headerTable.AddCell(reportTitle);
+
+
+            doc.Add(headerTable);
+            doc.Add(new Paragraph("\n\n"));
             // ================= Customers Report =================
+
+            MemoryStream msT = new MemoryStream();
+            Resources.analystics.Save(msT, System.Drawing.Imaging.ImageFormat.Png);
+
+            iTextSharp.text.Image logoSales = iTextSharp.text.Image.GetInstance(msT.ToArray());
+
+            logoSales.ScaleAbsolute(42, 42);
+            logoSales.Alignment = Element.ALIGN_RIGHT;
+
+
+            PdfPTable SalesTitleTable = new PdfPTable(1);
+            SalesTitleTable.WidthPercentage = 100;
+            SalesTitleTable.SetWidths(new float[] { 1f });
+            SalesTitleTable.HorizontalAlignment = Element.ALIGN_MIDDLE;
+
+
+
+            SalesTitleTable.AddCell(MakeReportsTitleCell(logoSales, "Customers Report"));
+
+            doc.Add(SalesTitleTable);
+            doc.Add(new Paragraph("\n"));
+
+            // ================= TABLE HEADER =================
+            PdfPTable CustomersReportTable = CreateCustomersReportTable(blue);
+
+            CustomersReportTable.HeaderRows = 1;
+
+            // ================= TABLE ROWS =================
+            foreach (DataRow row in dtCustomersReport.Rows)
+            {
+                CustomersReportTable.AddCell(MakeCell(row["Customer ID"].ToString()));
+                CustomersReportTable.AddCell(MakeCell(row["Customer Name"].ToString()));
+                CustomersReportTable.AddCell(MakeCell(row["Total Invoices"].ToString()));
+                CustomersReportTable.AddCell(MakeCell(row["Total Spent"].ToString()));
+
+            }
+
+            doc.Add(CustomersReportTable);
+            //doc.Add(new Paragraph("\n\n"));
+            
 
 
             doc.Close();
@@ -113,6 +310,9 @@ namespace CIMS.Global_Classes
             System.Diagnostics.Process.Start(saveDialog.FileName);
 
         }
+
+
+
 
         public static void GenerateInvoicePDF(int InvoiceID)
         {
@@ -504,6 +704,35 @@ namespace CIMS.Global_Classes
 
             SalesReportTable.AddCell(MakeHeaderCell("Sale Date", Color));
             SalesReportTable.AddCell(MakeHeaderCell("Total Sales", Color));
+
+            return SalesReportTable;
+
+        }
+
+        public static PdfPTable CreateTopProductsReportTable(BaseColor Color)
+        {
+            PdfPTable SalesReportTable = new PdfPTable(2);
+            SalesReportTable.WidthPercentage = 100;
+            SalesReportTable.SetWidths(new float[] { 10, 10 });
+
+            SalesReportTable.AddCell(MakeHeaderCell("Product Name", Color));
+            SalesReportTable.AddCell(MakeHeaderCell("Total Sold", Color));
+
+            return SalesReportTable;
+
+        }
+
+
+        public static PdfPTable CreateCustomersReportTable(BaseColor Color)
+        {
+            PdfPTable SalesReportTable = new PdfPTable(4);
+            SalesReportTable.WidthPercentage = 100;
+            SalesReportTable.SetWidths(new float[] { 10, 25 ,10 ,10 });
+            
+            SalesReportTable.AddCell(MakeHeaderCell("Customer ID", Color));
+            SalesReportTable.AddCell(MakeHeaderCell("Customer Name", Color));
+            SalesReportTable.AddCell(MakeHeaderCell("Total Invoices", Color));
+            SalesReportTable.AddCell(MakeHeaderCell("Total Spent", Color));
 
             return SalesReportTable;
 
