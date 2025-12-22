@@ -136,11 +136,11 @@
   <data name="call" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\call.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="europe" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\europe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sales" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sales.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="guidebook" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\guidebook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="add-group" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add-group.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="product-default" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\product-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -156,6 +156,9 @@
   </data>
   <data name="cash-payment" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cash-payment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="profile1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\profile1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="edit-info" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit-info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -183,6 +186,9 @@
   </data>
   <data name="check (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\check (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="check" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="apple" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\apple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,14 +220,11 @@
   <data name="project" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\project.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="check" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="business-card" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\business-card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loading.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="business-card" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\business-card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="next" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,8 +262,8 @@
   <data name="product" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\product.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="add-group" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add-group.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="europe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\europe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="receive-amount1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\receive-amount1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -289,6 +292,9 @@
   <data name="password_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\password_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Female" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Female.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="delete (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -297,6 +303,9 @@
   </data>
   <data name="information_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\information_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linkedin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\linkedin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Blue-520x220" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Blue-520x220.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -307,14 +316,14 @@
   <data name="invoice2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\invoice2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Female" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Female.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="scale_1200" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scale_1200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bill" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="scale_1200" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\scale_1200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="guidebook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\guidebook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="debit-card" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\debit-card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -324,9 +333,6 @@
   </data>
   <data name="profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\profile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sales" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sales.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="down" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -379,7 +385,7 @@
   <data name="invoice1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\invoice1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="linkedin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\linkedin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

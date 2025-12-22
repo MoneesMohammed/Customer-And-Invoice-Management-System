@@ -649,5 +649,11 @@
   <ItemGroup>
     <None Include="Resources\linkedin.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

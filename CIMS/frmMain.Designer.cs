@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.lblUserWelcome = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -96,7 +95,7 @@
             // 
             // Users_TSMenuItem
             // 
-            this.Users_TSMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("Users_TSMenuItem.Image")));
+            this.Users_TSMenuItem.Image = global::CIMS.Properties.Resources.profile1;
             this.Users_TSMenuItem.Name = "Users_TSMenuItem";
             this.Users_TSMenuItem.Size = new System.Drawing.Size(158, 64);
             this.Users_TSMenuItem.Text = "Users";
@@ -148,7 +147,7 @@
             this.HelpTSMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AboutTSMenuItem,
             this.InstructionsTSMenuItem});
-            this.HelpTSMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("HelpTSMenuItem.Image")));
+            this.HelpTSMenuItem.Image = global::CIMS.Properties.Resources.help;
             this.HelpTSMenuItem.Name = "HelpTSMenuItem";
             this.HelpTSMenuItem.Size = new System.Drawing.Size(149, 64);
             this.HelpTSMenuItem.Text = "Help";
