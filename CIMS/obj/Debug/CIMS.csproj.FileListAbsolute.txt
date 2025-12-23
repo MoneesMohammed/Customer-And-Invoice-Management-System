@@ -50,3 +50,4 @@ C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS\obj\Debug\CIMS.Services.Manag
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS\obj\Debug\CIMS.UserControls.CtrlInvoices.CtrlInvoicesDGV.resources
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS\obj\Debug\CIMS.Help.frmAbout.resources
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS\obj\Debug\CIMS.Help.frmInstructions.resources
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\CIMS\obj\Debug\CIMS.UserControls.CtrlSidebarForServices.resources

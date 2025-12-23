@@ -1,28 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{DA57E89E-8393-4F43-9BE9-AE5B4BD887DE}|CIMS.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DA57E89E-8393-4F43-9BE9-AE5B4BD887DE}|CIMS.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA57E89E-8393-4F43-9BE9-AE5B4BD887DE}|CIMS.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims\\customers\\frmaddeditcustomerinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA57E89E-8393-4F43-9BE9-AE5B4BD887DE}|CIMS.csproj|solutionrelative:customers\\frmaddeditcustomerinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{771DF6FE-BAEC-41F3-A921-BE5CCBB10266}|..\\CIMS_BusinessLayer\\CIMS_BusinessLayer.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims_businesslayer\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{771DF6FE-BAEC-41F3-A921-BE5CCBB10266}|..\\CIMS_BusinessLayer\\CIMS_BusinessLayer.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims_businesslayer\\people.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC3265F-0F07-4678-88BC-203B9652F64B}|..\\CIMS_DataAccessLayar\\CIMS_DataAccessLayar.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims_dataaccesslayar\\peopledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBC3265F-0F07-4678-88BC-203B9652F64B}|..\\CIMS_DataAccessLayar\\CIMS_DataAccessLayar.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims_dataaccesslayar\\usersdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -30,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,83 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmAddEditCustomerInfo.cs",
-              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS\\Customers\\frmAddEditCustomerInfo.cs",
-              "RelativeDocumentMoniker": "Customers\\frmAddEditCustomerInfo.cs",
-              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS\\Customers\\frmAddEditCustomerInfo.cs",
-              "RelativeToolTip": "Customers\\frmAddEditCustomerInfo.cs",
-              "ViewState": "AgIAAPoAAAAAAAAAAAAUwC8BAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-22T14:45:31.323Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmMain.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS\\frmMain.cs",
-              "RelativeDocumentMoniker": "frmMain.cs",
-              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS\\frmMain.cs [Design]",
-              "RelativeToolTip": "frmMain.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-22T13:57:39.431Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "People.cs",
-              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_BusinessLayer\\People.cs",
-              "RelativeDocumentMoniker": "..\\CIMS_BusinessLayer\\People.cs",
-              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_BusinessLayer\\People.cs",
-              "RelativeToolTip": "..\\CIMS_BusinessLayer\\People.cs",
-              "ViewState": "AgIAAJ0AAAAAAAAAAAAwwLkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-22T13:33:10.536Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PeopleData.cs",
-              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_DataAccessLayar\\PeopleData.cs",
-              "RelativeDocumentMoniker": "..\\CIMS_DataAccessLayar\\PeopleData.cs",
-              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_DataAccessLayar\\PeopleData.cs",
-              "RelativeToolTip": "..\\CIMS_DataAccessLayar\\PeopleData.cs",
-              "ViewState": "AgIAAA0BAAAAAAAAAAAcwD0BAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-22T12:20:23.116Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UsersData.cs",
-              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_DataAccessLayar\\UsersData.cs",
-              "RelativeDocumentMoniker": "..\\CIMS_DataAccessLayar\\UsersData.cs",
-              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_DataAccessLayar\\UsersData.cs",
-              "RelativeToolTip": "..\\CIMS_DataAccessLayar\\UsersData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-22T11:36:53.431Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_BusinessLayer\\User.cs",
-              "RelativeDocumentMoniker": "..\\CIMS_BusinessLayer\\User.cs",
-              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_BusinessLayer\\User.cs",
-              "RelativeToolTip": "..\\CIMS_BusinessLayer\\User.cs",
-              "ViewState": "AgIAALAAAAAAAAAAAAAqwMMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-22T11:36:47.652Z",
-              "EditorCaption": ""
             }
           ]
         }

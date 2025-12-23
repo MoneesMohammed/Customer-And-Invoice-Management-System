@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
-            this.btnShowHidePassword = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.cbRememberMe = new System.Windows.Forms.CheckBox();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -37,23 +35,11 @@
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnShowHidePassword = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnShowHidePassword
-            // 
-            this.btnShowHidePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowHidePassword.Image = global::CIMS.Properties.Resources.close_eye;
-            this.btnShowHidePassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShowHidePassword.Location = new System.Drawing.Point(484, 377);
-            this.btnShowHidePassword.Name = "btnShowHidePassword";
-            this.btnShowHidePassword.Size = new System.Drawing.Size(40, 37);
-            this.btnShowHidePassword.TabIndex = 13;
-            this.btnShowHidePassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnShowHidePassword.UseVisualStyleBackColor = true;
-            this.btnShowHidePassword.Click += new System.EventHandler(this.btnShowHidePassword_Click);
             // 
             // label3
             // 
@@ -83,6 +69,8 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.Window;
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -93,6 +81,7 @@
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.btnLogin_Paint);
             // 
             // txtPassword
             // 
@@ -137,26 +126,44 @@
             this.label1.Text = "UserName";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnClose
-            // 
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.Image = global::CIMS.Properties.Resources.close_11;
-            this.btnClose.Location = new System.Drawing.Point(533, 12);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(55, 47);
-            this.btnClose.TabIndex = 14;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::CIMS.Properties.Resources.user;
             this.pictureBox1.Location = new System.Drawing.Point(205, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(179, 169);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnShowHidePassword
+            // 
+            this.btnShowHidePassword.BackColor = System.Drawing.Color.Transparent;
+            this.btnShowHidePassword.FlatAppearance.BorderSize = 0;
+            this.btnShowHidePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowHidePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowHidePassword.Image = global::CIMS.Properties.Resources.close_eye;
+            this.btnShowHidePassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShowHidePassword.Location = new System.Drawing.Point(484, 377);
+            this.btnShowHidePassword.Name = "btnShowHidePassword";
+            this.btnShowHidePassword.Size = new System.Drawing.Size(40, 37);
+            this.btnShowHidePassword.TabIndex = 13;
+            this.btnShowHidePassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnShowHidePassword.UseVisualStyleBackColor = false;
+            this.btnShowHidePassword.Click += new System.EventHandler(this.btnShowHidePassword_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = global::CIMS.Properties.Resources.close_11;
+            this.btnClose.Location = new System.Drawing.Point(539, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(49, 47);
+            this.btnClose.TabIndex = 14;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmLogin
             // 

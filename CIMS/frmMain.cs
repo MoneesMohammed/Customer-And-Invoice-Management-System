@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,7 @@ namespace CIMS
         public frmMain()
         {
             InitializeComponent();
+            //panelSidebar.Visible = false;
         }
 
         private void SignOut_TSMenuItem_Click(object sender, EventArgs e)
@@ -25,10 +27,18 @@ namespace CIMS
             this.Close();
         }
 
+        //private void ctrlSidebarForServices1_OnLogoutClicked()
+        //{ 
+            
+        
+        //}
+
         private void Services_TSMenuItem_Click(object sender, EventArgs e)
         {
-            frmServices form = new frmServices();
-            form.ShowDialog();
+            //frmServices form = new frmServices();
+            //form.ShowDialog();
+            
+            panelSidebar.Visible = !panelSidebar.Visible;
         }
 
         private void Users_TSMenuItem_Click(object sender, EventArgs e)
@@ -64,6 +74,40 @@ namespace CIMS
         {
             frmInstructions frmInstructions = new frmInstructions();
             frmInstructions.ShowDialog();
+        }
+
+        private void panelSidebar_Paint(object sender, PaintEventArgs e)
+        {
+            using (LinearGradientBrush brush = new LinearGradientBrush(
+               panelSidebar.ClientRectangle,
+               Color.FromArgb(60, 120, 200),
+               Color.FromArgb(120, 60, 160),
+               90f))
+            {
+                e.Graphics.FillRectangle(brush, panelSidebar.ClientRectangle);
+            }
+        }
+
+        private void ctrlSidebarForServices1_OnLogoutClicked(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmMain_Shown(object sender, EventArgs e)
+        {
+            panelSidebar.Visible = false;
+        }
+
+        private void linkedin_Click(object sender, EventArgs e)
+        {
+            llbllinkedin.LinkVisited = true;
+            System.Diagnostics.Process.Start("https://www.linkedin.com/in/mounes-alshawashi-466396372/");
+        }
+
+        private void GitHub_Click(object sender, EventArgs e)
+        {
+            llblGitHub.LinkVisited = true;
+            System.Diagnostics.Process.Start("https://github.com/MoneesMohammed");
         }
     }
 }

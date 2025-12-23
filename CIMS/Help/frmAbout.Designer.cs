@@ -65,9 +65,10 @@
             // llblGitHub
             // 
             this.llblGitHub.AutoSize = true;
+            this.llblGitHub.Cursor = System.Windows.Forms.Cursors.Hand;
             this.llblGitHub.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llblGitHub.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.llblGitHub.Location = new System.Drawing.Point(29, 725);
+            this.llblGitHub.Location = new System.Drawing.Point(31, 706);
             this.llblGitHub.Name = "llblGitHub";
             this.llblGitHub.Size = new System.Drawing.Size(78, 25);
             this.llblGitHub.TabIndex = 2;
@@ -89,9 +90,10 @@
             // llbllinkedin
             // 
             this.llbllinkedin.AutoSize = true;
+            this.llbllinkedin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.llbllinkedin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llbllinkedin.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.llbllinkedin.Location = new System.Drawing.Point(197, 725);
+            this.llbllinkedin.Location = new System.Drawing.Point(199, 706);
             this.llbllinkedin.Name = "llbllinkedin";
             this.llbllinkedin.Size = new System.Drawing.Size(86, 25);
             this.llbllinkedin.TabIndex = 5;
@@ -101,10 +103,11 @@
             // 
             // picGitHub
             // 
+            this.picGitHub.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picGitHub.Image = global::CIMS.Properties.Resources.github;
-            this.picGitHub.Location = new System.Drawing.Point(18, 659);
+            this.picGitHub.Location = new System.Drawing.Point(36, 653);
             this.picGitHub.Name = "picGitHub";
-            this.picGitHub.Size = new System.Drawing.Size(100, 50);
+            this.picGitHub.Size = new System.Drawing.Size(61, 50);
             this.picGitHub.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picGitHub.TabIndex = 7;
             this.picGitHub.TabStop = false;
@@ -112,10 +115,11 @@
             // 
             // piclinkedin
             // 
+            this.piclinkedin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.piclinkedin.Image = global::CIMS.Properties.Resources.linkedin;
-            this.piclinkedin.Location = new System.Drawing.Point(192, 659);
+            this.piclinkedin.Location = new System.Drawing.Point(214, 653);
             this.piclinkedin.Name = "piclinkedin";
-            this.piclinkedin.Size = new System.Drawing.Size(100, 50);
+            this.piclinkedin.Size = new System.Drawing.Size(55, 50);
             this.piclinkedin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.piclinkedin.TabIndex = 6;
             this.piclinkedin.TabStop = false;
@@ -136,7 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 787);
+            this.ClientSize = new System.Drawing.Size(783, 746);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.picGitHub);
             this.Controls.Add(this.piclinkedin);

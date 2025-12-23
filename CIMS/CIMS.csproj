@@ -226,6 +226,12 @@
     <Compile Include="UserControls\CtrlProduct\CtrlProductInfo.Designer.cs">
       <DependentUpon>CtrlProductInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\CtrlSidebarForServices.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlSidebarForServices.Designer.cs">
+      <DependentUpon>CtrlSidebarForServices.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\CtrlUser\crtlUserDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -349,6 +355,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CtrlProduct\CtrlProductInfo.resx">
       <DependentUpon>CtrlProductInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlSidebarForServices.resx">
+      <DependentUpon>CtrlSidebarForServices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CtrlUser\crtlUserDetails.resx">
       <DependentUpon>crtlUserDetails.cs</DependentUpon>
@@ -654,6 +663,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product-management.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smartphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\evaluation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

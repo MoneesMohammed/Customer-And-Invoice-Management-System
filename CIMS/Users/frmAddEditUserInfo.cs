@@ -17,7 +17,7 @@ namespace CIMS.Users
     public partial class frmAddEditUserInfo : Form
     {
         //Delegate
-        public delegate void DataFoundEventHandler(object sender, int CustomerID);
+        public delegate void DataFoundEventHandler(object sender, int UserID);
 
         public event DataFoundEventHandler DataBack;
 

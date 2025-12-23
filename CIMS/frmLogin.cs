@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -59,8 +60,6 @@ namespace CIMS
             }
         }
 
-        
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             clsUser user = clsUser.FindByUserNameAndPassword(txtUserName.Text.Trim(), txtPassword.Text.Trim());
@@ -96,6 +95,36 @@ namespace CIMS
                 txtUserName.Focus();
                 MessageBox.Show("Invalid The Username/Password .", "Warning Credentials", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+        }
+
+        private void btnLogin_Paint(object sender, PaintEventArgs e)
+        {
+            Button btn = (Button)sender;
+
+            // Quality improvement
+            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+
+            // Gradient background drawing
+            using (LinearGradientBrush brush = new LinearGradientBrush(
+                btn.ClientRectangle,
+                Color.FromArgb(0, 164, 247),
+                Color.FromArgb(0, 241, 143),
+                180f))
+            {
+                e.Graphics.FillRectangle(brush, btn.ClientRectangle);
+            }
+
+            //Text drawing
+            TextRenderer.DrawText(
+                e.Graphics,
+                btn.Text,
+                btn.Font,
+                btn.ClientRectangle,
+                Color.White,
+                TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter
+            );
+
 
         }
     }

@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.lblUserWelcome = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Services_TSMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Users_TSMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AccountSetting_TSMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,8 +39,20 @@
             this.HelpTSMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutTSMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.InstructionsTSMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblUserWelcome = new System.Windows.Forms.Label();
+            this.panelSidebar = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picGitHub = new System.Windows.Forms.PictureBox();
+            this.piclinkedin = new System.Windows.Forms.PictureBox();
+            this.llbllinkedin = new System.Windows.Forms.LinkLabel();
+            this.llblGitHub = new System.Windows.Forms.LinkLabel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.ctrlSidebarForServices1 = new CIMS.UserControls.CtrlSidebarForServices();
             this.menuStrip1.SuspendLayout();
+            this.panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGitHub)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.piclinkedin)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -56,34 +66,9 @@
             this.HelpTSMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1465, 68);
+            this.menuStrip1.Size = new System.Drawing.Size(1636, 68);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // lblUserWelcome
-            // 
-            this.lblUserWelcome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(40)))), ((int)(((byte)(88)))));
-            this.lblUserWelcome.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblUserWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserWelcome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblUserWelcome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblUserWelcome.Location = new System.Drawing.Point(0, 822);
-            this.lblUserWelcome.Name = "lblUserWelcome";
-            this.lblUserWelcome.Size = new System.Drawing.Size(1465, 33);
-            this.lblUserWelcome.TabIndex = 5;
-            this.lblUserWelcome.Text = "👋 Welcome! UserName";
-            this.lblUserWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::CIMS.Properties.Resources.scale_1200;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 68);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1465, 787);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // Services_TSMenuItem
             // 
@@ -139,7 +124,7 @@
             this.SignOut_TSMenuItem.Image = global::CIMS.Properties.Resources.logout_2;
             this.SignOut_TSMenuItem.Name = "SignOut_TSMenuItem";
             this.SignOut_TSMenuItem.Size = new System.Drawing.Size(362, 66);
-            this.SignOut_TSMenuItem.Text = "Sign Out";
+            this.SignOut_TSMenuItem.Text = "Logout";
             this.SignOut_TSMenuItem.Click += new System.EventHandler(this.SignOut_TSMenuItem_Click);
             // 
             // HelpTSMenuItem
@@ -168,11 +153,130 @@
             this.InstructionsTSMenuItem.Text = "Instructions";
             this.InstructionsTSMenuItem.Click += new System.EventHandler(this.InstructionsTSMenuItem_Click);
             // 
+            // lblUserWelcome
+            // 
+            this.lblUserWelcome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(40)))), ((int)(((byte)(88)))));
+            this.lblUserWelcome.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblUserWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserWelcome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblUserWelcome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblUserWelcome.Location = new System.Drawing.Point(0, 1000);
+            this.lblUserWelcome.Name = "lblUserWelcome";
+            this.lblUserWelcome.Size = new System.Drawing.Size(1636, 33);
+            this.lblUserWelcome.TabIndex = 5;
+            this.lblUserWelcome.Text = "👋 Welcome! UserName";
+            this.lblUserWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelSidebar
+            // 
+            this.panelSidebar.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panelSidebar.Controls.Add(this.label4);
+            this.panelSidebar.Controls.Add(this.picGitHub);
+            this.panelSidebar.Controls.Add(this.piclinkedin);
+            this.panelSidebar.Controls.Add(this.llbllinkedin);
+            this.panelSidebar.Controls.Add(this.llblGitHub);
+            this.panelSidebar.Controls.Add(this.ctrlSidebarForServices1);
+            this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSidebar.Location = new System.Drawing.Point(0, 68);
+            this.panelSidebar.Name = "panelSidebar";
+            this.panelSidebar.Size = new System.Drawing.Size(352, 932);
+            this.panelSidebar.TabIndex = 6;
+            this.panelSidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSidebar_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::CIMS.Properties.Resources.scale_1200;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 68);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1636, 965);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // picGitHub
+            // 
+            this.picGitHub.BackColor = System.Drawing.Color.Transparent;
+            this.picGitHub.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picGitHub.Image = global::CIMS.Properties.Resources.github;
+            this.picGitHub.Location = new System.Drawing.Point(30, 844);
+            this.picGitHub.Name = "picGitHub";
+            this.picGitHub.Size = new System.Drawing.Size(61, 52);
+            this.picGitHub.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picGitHub.TabIndex = 11;
+            this.picGitHub.TabStop = false;
+            this.picGitHub.Click += new System.EventHandler(this.GitHub_Click);
+            // 
+            // piclinkedin
+            // 
+            this.piclinkedin.BackColor = System.Drawing.Color.Transparent;
+            this.piclinkedin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.piclinkedin.Image = global::CIMS.Properties.Resources.linkedin;
+            this.piclinkedin.Location = new System.Drawing.Point(141, 844);
+            this.piclinkedin.Name = "piclinkedin";
+            this.piclinkedin.Size = new System.Drawing.Size(64, 50);
+            this.piclinkedin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.piclinkedin.TabIndex = 10;
+            this.piclinkedin.TabStop = false;
+            this.piclinkedin.Click += new System.EventHandler(this.linkedin_Click);
+            // 
+            // llbllinkedin
+            // 
+            this.llbllinkedin.AutoSize = true;
+            this.llbllinkedin.BackColor = System.Drawing.Color.Transparent;
+            this.llbllinkedin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.llbllinkedin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llbllinkedin.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.llbllinkedin.Location = new System.Drawing.Point(136, 899);
+            this.llbllinkedin.Name = "llbllinkedin";
+            this.llbllinkedin.Size = new System.Drawing.Size(86, 25);
+            this.llbllinkedin.TabIndex = 9;
+            this.llbllinkedin.TabStop = true;
+            this.llbllinkedin.Text = "linkedin";
+            this.llbllinkedin.Click += new System.EventHandler(this.linkedin_Click);
+            // 
+            // llblGitHub
+            // 
+            this.llblGitHub.AutoSize = true;
+            this.llblGitHub.BackColor = System.Drawing.Color.Transparent;
+            this.llblGitHub.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.llblGitHub.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblGitHub.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.llblGitHub.Location = new System.Drawing.Point(25, 899);
+            this.llblGitHub.Name = "llblGitHub";
+            this.llblGitHub.Size = new System.Drawing.Size(78, 25);
+            this.llblGitHub.TabIndex = 8;
+            this.llblGitHub.TabStop = true;
+            this.llblGitHub.Text = "GitHub";
+            this.llblGitHub.Click += new System.EventHandler(this.GitHub_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label4.Location = new System.Drawing.Point(50, 802);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(136, 25);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Contact links";
+            // 
+            // ctrlSidebarForServices1
+            // 
+            this.ctrlSidebarForServices1.BackColor = System.Drawing.Color.Transparent;
+            this.ctrlSidebarForServices1.Location = new System.Drawing.Point(4, 13);
+            this.ctrlSidebarForServices1.Name = "ctrlSidebarForServices1";
+            this.ctrlSidebarForServices1.Size = new System.Drawing.Size(345, 618);
+            this.ctrlSidebarForServices1.TabIndex = 0;
+            this.ctrlSidebarForServices1.OnLogoutClicked += new System.EventHandler(this.ctrlSidebarForServices1_OnLogoutClicked);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1465, 855);
+            this.ClientSize = new System.Drawing.Size(1636, 1033);
+            this.Controls.Add(this.panelSidebar);
             this.Controls.Add(this.lblUserWelcome);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
@@ -181,9 +285,14 @@
             this.Text = "Main Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
+            this.Shown += new System.EventHandler(this.frmMain_Shown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panelSidebar.ResumeLayout(false);
+            this.panelSidebar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGitHub)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.piclinkedin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,6 +313,13 @@
         private System.Windows.Forms.ToolStripMenuItem HelpTSMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AboutTSMenuItem;
         private System.Windows.Forms.ToolStripMenuItem InstructionsTSMenuItem;
+        private System.Windows.Forms.Panel panelSidebar;
+        private UserControls.CtrlSidebarForServices ctrlSidebarForServices1;
+        private System.Windows.Forms.PictureBox picGitHub;
+        private System.Windows.Forms.PictureBox piclinkedin;
+        private System.Windows.Forms.LinkLabel llbllinkedin;
+        private System.Windows.Forms.LinkLabel llblGitHub;
+        private System.Windows.Forms.Label label4;
     }
 }
 
