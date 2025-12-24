@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPayments));
             this.label4 = new System.Windows.Forms.Label();
             this.lblRecodes = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -132,7 +131,7 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmShowDetails});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(217, 72);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(217, 50);
             // 
             // tsmShowDetails
             // 
@@ -238,7 +237,7 @@
             // 
             // butAddNewPayment
             // 
-            this.butAddNewPayment.Image = ((System.Drawing.Image)(resources.GetObject("butAddNewPayment.Image")));
+            this.butAddNewPayment.Image = global::CIMS.Properties.Resources.wallet;
             this.butAddNewPayment.Location = new System.Drawing.Point(863, 166);
             this.butAddNewPayment.Name = "butAddNewPayment";
             this.butAddNewPayment.Size = new System.Drawing.Size(72, 61);
