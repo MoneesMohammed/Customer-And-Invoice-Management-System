@@ -3,8 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DA57E89E-8393-4F43-9BE9-AE5B4BD887DE}|CIMS.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims\\global classes\\clspdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA57E89E-8393-4F43-9BE9-AE5B4BD887DE}|CIMS.csproj|solutionrelative:global classes\\clspdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BBC3265F-0F07-4678-88BC-203B9652F64B}|..\\CIMS_DataAccessLayar\\CIMS_DataAccessLayar.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\cims_dataaccesslayar\\datasettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,14 +26,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "clsPDF.cs",
-              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS\\Global Classes\\clsPDF.cs",
-              "RelativeDocumentMoniker": "Global Classes\\clsPDF.cs",
-              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS\\Global Classes\\clsPDF.cs*",
-              "RelativeToolTip": "Global Classes\\clsPDF.cs*",
-              "ViewState": "AgIAAFMBAAAAAAAAAAAAAF4BAABiAAAAAAAAAA==",
+              "Title": "DataSettings.cs",
+              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_DataAccessLayar\\DataSettings.cs",
+              "RelativeDocumentMoniker": "..\\CIMS_DataAccessLayar\\DataSettings.cs",
+              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\CIMS_DataAccessLayar\\DataSettings.cs",
+              "RelativeToolTip": "..\\CIMS_DataAccessLayar\\DataSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T15:58:29.661Z",
+              "WhenOpened": "2025-12-25T19:54:04.295Z",
               "EditorCaption": ""
             }
           ]
