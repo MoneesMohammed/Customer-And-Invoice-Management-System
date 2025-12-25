@@ -311,9 +311,6 @@ namespace CIMS.Global_Classes
 
         }
 
-
-
-
         public static void GenerateInvoicePDF(int InvoiceID)
         {
             clsInvoice Invoice = clsInvoice.Find(InvoiceID);
@@ -344,7 +341,17 @@ namespace CIMS.Global_Classes
                 return;
 
             Document doc = new Document(PageSize.A4, 30, 30, 40, 30);
-            PdfWriter.GetInstance(doc, new FileStream(saveDialog.FileName, FileMode.Create));
+            PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(saveDialog.FileName, FileMode.Create));
+
+            // writer.PageEvent = new WatermarkPageEvent("CONFIDENTIAL");
+
+            MemoryStream lw = new MemoryStream();
+            Resources.logo_of_Watermark_6.Save(lw, System.Drawing.Imaging.ImageFormat.Jpeg);
+
+            iTextSharp.text.Image watermarkLogo = iTextSharp.text.Image.GetInstance(lw.ToArray());
+            writer.PageEvent = new ImageWatermarkEvent(watermarkLogo);
+
+
             doc.Open();
 
             // ================= COLOR ================
@@ -737,6 +744,67 @@ namespace CIMS.Global_Classes
             return SalesReportTable;
 
         }
+
+
+        class WatermarkPageEvent : PdfPageEventHelper
+        {
+            private readonly string _watermarkText;
+            private readonly Font _font;
+
+            public WatermarkPageEvent(string watermarkText)
+            {
+                _watermarkText = watermarkText;
+
+                _font = new Font(Font.FontFamily.HELVETICA, 80, Font.BOLD,
+                    new BaseColor(200, 200, 200)); // رمادي فاتح
+            }
+
+            public override void OnEndPage(PdfWriter writer, Document document)
+            {
+                PdfContentByte canvas = writer.DirectContentUnder;
+
+                Phrase watermark = new Phrase(_watermarkText, _font);
+
+                ColumnText.ShowTextAligned(
+                    canvas,
+                    Element.ALIGN_CENTER,
+                    watermark,
+                    document.PageSize.Width / 2,
+                    document.PageSize.Height / 2,
+                    45  // زاوية الميل
+                );
+            }
+        }
+
+        class ImageWatermarkEvent : PdfPageEventHelper
+        {
+            private iTextSharp.text.Image _image;
+
+            public ImageWatermarkEvent(iTextSharp.text.Image image)
+            {
+                _image = image;
+                _image.ScaleAbsolute(512, 512);
+            }
+
+            public override void OnEndPage(PdfWriter writer, Document document)
+            {
+                PdfContentByte canvas = writer.DirectContentUnder;
+
+                PdfGState gs = new PdfGState();
+                gs.FillOpacity = 0.18f;   
+                canvas.SetGState(gs);
+
+                _image.SetAbsolutePosition(
+                    (document.PageSize.Width - _image.ScaledWidth) / 2,
+                    (document.PageSize.Height - _image.ScaledHeight) / 2
+                );
+
+                canvas.AddImage(_image);
+            }
+        }
+
+
+
 
     }
 }

@@ -691,5 +691,8 @@
   <ItemGroup>
     <None Include="Resources\wallet.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-of-Watermark_6.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -703,6 +703,16 @@ namespace CIMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_of_Watermark_6 {
+            get {
+                object obj = ResourceManager.GetObject("logo-of-Watermark_6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logout {
             get {
                 object obj = ResourceManager.GetObject("Logout", resourceCulture);
